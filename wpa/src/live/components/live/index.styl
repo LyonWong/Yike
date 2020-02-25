@@ -1,0 +1,655 @@
+@import '~@lib/css/index.styl';
+
+em, i {
+  font-style: normal
+}
+
+ol, ul {
+  margin: 0
+  padding: 0
+}
+
+li
+  list-style-type: none
+
+.live-page
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  background: #ECEDF1;
+  overflow: hidden;
+
+.live-header
+    position: relative;
+    display: block;
+    background: #fff;
+    margin: 34px;
+    padding: 30px;
+    px2px(font-size, 28px);
+    border: solid 1px #ededed;
+    title
+      color: #333;
+    li
+      list-style-type: disc;
+      margin-left: 25px;
+      padding: 10px 8px 0 0;
+      color: gray;
+      px2px(line-height, 32px);
+
+.live-sms-list
+  padding-bottom: 60px;
+  &.commentShow
+    padding-bottom: 500px;
+    &.big
+      padding-bottom: 120%;
+  li
+    position: relative;
+    display: block;
+    padding: 40px 34px 0 120px;
+    &.is-system
+      padding-top: 0;
+      padding-bottom: 0;
+    &.is-quote
+      -moz-transform:scaleX(-1);
+      -webkit-transform:scaleX(-1);
+      -o-transform:scaleX(-1);
+      transform:scaleX(-1);
+      .user-img
+        -moz-transform:scaleX(-1);
+        -webkit-transform:scaleX(-1);
+        -o-transform:scaleX(-1);
+        transform:scaleX(-1);
+      .live-sms
+        .speaker-name
+          .inline-block
+            display: inline-block;
+            -moz-transform:scaleX(-1);
+            -webkit-transform:scaleX(-1);
+            -o-transform:scaleX(-1);
+            transform:scaleX(-1);
+            .time
+              display: none;
+      .live-sms
+        .sms-content
+          background: #12B7F5;
+          &:after
+            background: #12B7F5;
+          .content-text.custom
+            padding: 0;
+            color: #fff;
+            -moz-transform:scaleX(-1);
+            -webkit-transform:scaleX(-1);
+            -o-transform:scaleX(-1);
+            transform:scaleX(-1);
+            .quote
+              border-bottom: 1px dotted #fff;
+    .live-system
+      color: #aaa;
+      px2px(font-size, 30px);
+      p
+       margin-left: -80px;
+       text-align: center;
+    .user-img
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      cursor: pointer;
+      px2px(top, 40px);
+      px2px(left, 34px);
+      img
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+    .live-sms
+      position: relative;
+      padding-left: 14px;
+      .speaker-name
+        color: #878787;
+        padding-bottom: 11px;
+        px2px(line-height, 28px);
+        px2px(font-size, 26px);
+        .nickname
+          display: inline-block;
+          max-width: 300px;
+          white-space:nowrap;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          vertical-align: middle;
+        .time
+          padding-left: 15px;
+          color: #bdbdbd;
+          vertical-align: middle;
+          px2px(font-size, 22px);
+      .sms-content
+        position: relative;
+        display: table;
+        padding: 10px 12px;
+        max-width: 80%;
+        background: #fff;
+        border: 1px solid #DBDBDB;
+        px2px(font-size, 32px);
+        px2px(border-radius, 8px);
+        &:before
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          content: '';
+          background-color: #fff;
+          border: 1px solid #ccc;
+          transform:rotate(45deg);
+          -webkit-transform:rotate(45deg);
+          z-index: 4;
+          px2px(top, 26px);
+          px2px(left, -9px);
+        &:after
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          background: #fff;
+          content: '';
+          z-index: 5;
+          transform:rotate(45deg);
+          -webkit-transform:rotate(45deg);
+          px2px(top, 26px);
+          px2px(left, -8px);
+        &.w65per
+          width: 65%;
+        .content-text
+          position: relative;
+          padding: 3px 28px 3px 14px;
+          max-width: 420px;
+          color: #3C4A55;
+          word-wrap: break-word;
+
+          px2px(line-height, 46px);
+          px2px(font-size, 32px);
+          &.custom
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-right: 5px;
+          .content-audio
+            audio
+              width: 100%;
+              px2px(font-size, 30px)
+          .custom-video
+            margin: -6px;
+            margin-left: -12px;
+            margin-bottom: -10px;
+            video
+              width: 100%;
+              min-width: 360px;
+            &.mobile
+              position: relative;
+              width: 300px;
+              height: 150px;
+              .video
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -3px;
+                bottom: 0;
+                background: #000;
+                text-align: center;
+                img
+                  display: none;
+                  width: 300px;
+                button
+                  display: inline-block;
+                  margin-top: 36px;
+                  background: none;
+                  border: 0 none;
+                  .tips
+                    display: none;
+                    padding-top: 10px;
+                    color: #fff;
+                    px2px(font-size, 32px);
+                  .iconfont
+                    color: #fff;
+                    px2px(font-size, 80px);
+                &.loading
+                  button
+                    display: none;
+                  img
+                    display: block;
+              &.error
+                .video
+                  button
+                    .tips
+                      display: inline-block;
+                    .iconfont
+                      display: none;
+              video
+                width: 1px;
+                height: 1px;
+                min-width: 1px;
+            &.is-pc-video
+              .video
+                position: absolute;
+                display: flex;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                align-items:center;
+                justify-content:center;
+                background: rgba(0,0,0,0.4);
+                .iconfont
+                  color: #fff;
+                  font-size: 50px;
+                img
+                  display: none;
+                &.loading
+                  .iconfont
+                    display: none;
+                  img
+                    display: block;
+          .custom-img
+            margin-left: -13px;
+            margin-right: -3px;
+            margin-top: -6px;
+            margin-bottom: -13px;
+            img
+              width: 100%;
+              px2px(font-size, 30px)
+        .content-img
+          display: -webkit-box;
+          display: box;
+          a
+            display: -webkit-box;
+            display: box;
+            padding: 0 2px;
+            -webkit-box-flex: 1;
+            box-flex: 1;
+            img
+              width: 100%;
+        .content-audio
+          px2px(font-size, 32px);
+          .voice:before
+            position: absolute;
+            font-family:"iconfont" !important;
+            font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          .voice
+            display: inline-block;
+            margin-left: -20px;
+            width: 77px;
+            &:before
+              width: 30px;
+              height: 42px;
+              color: #12B7F5;
+              px2px(font-size, 32px);
+            &.icon-dot1:before
+              px2px(left, 20px);
+              px2px(top, 22px);
+            &.icon-voice:before
+              px2px(left, 30px);
+              px2px(top, 22px);
+          .timer
+            color: #B5B5B5;
+            px2px(font-size, 28px);
+
+    &.tail
+      margin: 40px auto 0;
+      padding: 15px 0;
+      width: 70%;
+      background: #fff;
+      border-radius: 10px;
+      px2px(font-size, 32px);
+      .tail-con
+        padding: 0 30px;
+        .link
+          padding: 12px 0;
+        a
+          text-decoration: none;
+          color: #4da9eb;
+        .iconfont
+          color: #4da9eb;
+          px2px(font-size, 24px);
+      .tail-tit
+        padding: 10px 30px;
+        color: #3c4a55;
+
+.live-body
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 0 100px;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #ebebeb;
+  -webkit-overflow-scrolling: touch;
+
+  .pullMsgs
+    padding-top: 140px;
+    text-align: center;
+    px2px(font-size, 30px);
+    &.down {
+      margin-top: 0;
+      margin-bottom: 80px;
+    }
+
+    img
+      transform: scale(1.5,1.5);
+      -webkit-transform: scale(2.5, 2.5);
+      height: 50px;
+    span
+      color: gray;
+    a
+      color: #12b7f5;
+      text-decoration: none;
+    .iconfont
+      px2px(font-size, 32px);
+
+.live-loading
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 11;
+
+  .text
+    padding-top: 400px;
+    text-align: center;
+    px2px(font-size, 32px);
+
+  .spinner
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+
+  .double-bounce1, .double-bounce2
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #00a551;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+
+  .double-bounce2
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+
+  @-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+    }
+  }
+
+.top-bottom {
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+  width: 80px;
+  overflow: hidden;
+  opacity: 1;
+  px2px(right, 10px);
+  px2px(font-size, 32px);
+
+  >* {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    .iconfont {
+      px2px(font-size, 75px);
+    }
+    &:first-child{
+      //border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+.is-pc {
+  .live-page {
+    width: 908px;
+    height: 681px;
+    background: transparent;
+    &.s-pc {
+      margin-left: 200px;
+    }
+  }
+  .live-header {
+    margin: 20px;
+    padding: 15px;
+    margin-top: 50px;
+  }
+  .live-body{
+    bottom: initial;
+    padding: 10px 10px 30px;
+    width: 572px;
+    height: 640px;
+    overflow-y: scroll;
+  }
+  .live-sms-list {
+    li {
+      &.is-system {
+      padding-top: 0;
+      padding-bottom: 0;
+      }
+      .live-system {
+        font-size: 14px;
+      }
+      .live-sms {
+        .speaker-name{
+          .time{
+            padding-left: 10px;
+          }
+        }
+      }
+      &.tail {
+        padding: 6px 0;
+        width: 70%;
+        border-radius: 3px;
+        .tail-con {
+          padding: 0 20px;
+          .link {
+            padding: 6px 0;
+          }
+          a {
+            .iconfont {
+              background: transparent;
+            }
+          }
+        }
+        .tail-tit {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+  .live-sms-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    width: 546px;
+    background: #fff;
+    font-size: 16px;
+    font-weight: blod;
+    z-index: 7;
+
+    .end {
+      position: absolute;
+      right: 15px;
+      top: 9px;
+      padding: 4px 5px 3px;
+      background: #FB6666;
+      color: #FFF;
+      font-size: 14px;
+      cursor: pointer;
+      line-height: 1;
+      border-radius: 14px;
+      -webkit-border-radius: 14px;
+      &.comment {
+        right: 90px;
+      }
+      &.invite {
+        left: 70px;
+        right: auto;
+        background: #12b7f5;
+      }
+      .iconfont {
+        display: inline-block;
+        margin-top: 2px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .live-sms-left, .live-sms-right {
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    z-index: 7;
+  }
+  .live-sms-left {
+    left: 0;
+  }
+  .live-sms-right {
+    left: 561px;
+    z-index: 1;
+  }
+  .live-sms-bottom {
+    position: absolute;
+    left: 0;
+    top: 651px;
+    width: 565px;
+    height: 30px;
+    background: #fff;
+    z-index: 7;
+  }
+  .live-sms-list {
+    padding-bottom: 40px;
+    &.commentShow{
+      padding-bottom: 100px;
+    }
+  }
+  .top-bottom {
+    width: 30px;
+    left: 530px;
+
+    >* {
+      .iconfont {
+        px2px(font-size, 60px);
+      }
+    }
+  }
+
+  .owner {
+    .live-sms-list {
+      padding-bottom: 120px;
+    }
+  }
+  .live-sms-list li {
+    padding: 20px;
+
+    .live-sms{
+      padding-left: 60px;
+    }
+    .user-img{
+      width: 50px;
+      height: 50px;
+    }
+    .sms-content{
+      padding: 8px;
+      &:before{
+        width: 10px;
+        height: 10px;
+        px2px(left, -13px);
+      }
+      &:after{
+        width: 12px;
+        height: 12px;
+        px2px(left, -11px);
+      }
+      .content-text{
+        max-width: 350px;
+        padding: 0px 10px 0px 6px;
+        .custom-img{
+          margin: -6px -4px;
+          margin-bottom: -10px;
+        }
+      }
+    }
+  }
+}
+
+.is-wx {
+  .live-body {
+    .pullMsgs {
+      padding-top: 0;
+      &.down {
+        margin-top: -20px;
+      }
+    }
+  }
+}
+
+.is-pc {
+  .live-body {
+    .pullMsgs {
+      padding-top: 50px;
+      &.down {
+        margin-top: -130px;
+        margin-bottom: 30px;
+      }
+    }
+    .sms-content {
+      .custom-video{
+        margin: -6px -4px;
+        margin-bottom: -10px;
+
+        video {
+          width: 100%;
+        }
+      }
+      .content-text {
+        .custom {
+          .custom-video {
+            margin-left: -5px;
+          }
+        }
+      }
+    }
+    &.owner {
+      .pullMsgs {
+        &.down {
+          margin-top: -100px;
+        }
+      }
+    }
+  }
+  .live-loading {
+    .text {
+      padding-top: 200px;
+    }
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .live-body {
+    padding-bottom: 160px;
+  }
+}

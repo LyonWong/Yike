@@ -1,0 +1,152 @@
+@import '~@lib/css/index.styl';
+
+.content-message
+  overflow: hidden;
+  background: transparent;
+  .ft0
+    font-size: 0;
+  .loading
+    padding: 30px;
+    text-align: center;
+  .tab
+    padding: 0 30px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    a
+      display: inline-block;
+      padding: 20px 0;
+      color: #666;
+      text-decoration: none;
+      px2px(font-size, 32px);
+      &.active
+        color: #4DA9EB;
+        border-bottom: 2px solid #4DA9EB;
+    a+a
+      margin-left: 30px;
+    .iconfont
+      px2px(font-size, 30px);
+    .icon-open-left
+      display: inline-block;
+      margin-top: -12px;
+      margin-left: -10px;
+      vertical-align: middle;
+      px2px(font-size, 40px);
+    .sort
+      position: relative;
+      padding: 8px 0;
+      height: 100%;
+      .select
+        position: relative;
+        display: inline-block;
+        padding: 3px 0 4px;
+        border: 0 none;
+        color: #999999;
+        background: transparent;
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        line-height: 1.7;
+        px2px(font-size, 30px);
+        option
+          px2px(font-size, 10px);
+      .iconfont
+        display: inline-block;
+        color: #999999;
+        px2px(font-size, 30px);
+  .select-menu
+    position: absolute;
+    width: 200px;
+    z-index: 1;
+    border: 1px solid #ddd;
+    background: #fff;
+    -moz-box-shadow: 0px 3px 30px #C7C7C7;
+    -webkit-box-shadow: 0px 3px 30px #C7C7C7;
+    box-shadow: 0px 3px 30px #C7C7C7;
+    px2px(top, 80px);
+    px2px(right, 30px);
+    >*
+      display: block;
+      padding: 20px 0;
+      color: #333;
+      text-align: center;
+      &+span
+        border-top: 1px solid #ddd;
+  .content
+    position: relative;
+    background: #fff;
+    height: 100%;
+    .loading-layer
+      padding-bottom: 230px;
+    .no-data-text
+      padding-top: 15px;
+      px2px(font-size, 30px);
+  .back-brief
+    display: block;
+    padding-right: 25px;
+    border-right: 1px solid #ccc;
+    .iconfont
+      px2px(font-size, 36px);
+  div.lesson-more
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.3);
+    .more-container
+      position: absolute;
+      padding: 0;
+      width: 100%;
+      px2px(bottom, 98px);
+    div>*
+      padding: 30px 0;
+      color: #333;
+      background: #fff;
+      text-align: center;
+      border-top: 1px solid #d9d9d9;
+  .content-task
+    .loading-layer
+      padding-bottom: 140px;
+.content-dicuss
+  position: relative;
+.message-detail
+  position: relative;
+  /*background: #fff;
+  overflow: auto;
+  .content
+    height: auto;
+    padding-bottom: 300px;*/
+  .child
+    &.has-border
+      border-top: 20px solid #f0eff5;
+    .child-title
+      padding: 33px;
+      border-bottom: 1px solid #ccc;
+.body-pc
+  .content-message
+    div.lesson-more
+      left: 0;
+      bottom: 50px;
+    .select-menu
+      top: 65px;
+      right: 30px;
+      width: 100px;
+      -moz-box-shadow: 0px 3px 15px #C7C7C7;
+      -webkit-box-shadow: 0px 3px 15px #C7C7C7;
+      box-shadow: 0px 3px 15px #C7C7C7;
+    .tab
+      .icon-open-left
+        margin-top: -6px;
+  .content-dicuss
+    >.button
+      width: auto;
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .content-message {
+    div.lesson-more {
+      .more-container {
+        padding-bottom: 60px;
+      }
+    }
+  }
+}

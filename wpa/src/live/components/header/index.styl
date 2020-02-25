@@ -1,0 +1,65 @@
+@import '~@lib/css/index.styl';
+
+.header
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding 28px 0;
+  background-color: #37383B;
+  color: #fff;
+  text-align: center;
+  display: table;
+  box-shadow: 0 1px 0 rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.1);
+  transition: all .3s ease;
+  &.show
+    transform translateX(200px)
+  .bar
+    overflow hidden
+    .bar-nav
+      position absolute
+      top 0
+      padding-top 34px
+      px2px(line-height, 1px)
+      &.back
+        px2px(left, 21px)
+      &.more
+        px2px(right, 24px)
+      .iconfont
+        px2px(font-size, 38px)
+  .title
+    margin 0
+    text-align center
+    white-space nowrap
+    px2px(font-size, 38px)
+    width auto
+    overflow hidden
+    text-overflow ellipsis
+    z-index 2
+    font-weight 500
+    .iconfont
+      font-size 18px
+
+.is-pc {
+  .header {
+    padding 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    .bar {
+      position: relative;
+      margin: 0 auto;
+      width: 1200px;
+
+      .bar-nav {
+        padding-top: 0;
+        top: -9px;
+        .iconfont{
+          font-size: 36px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

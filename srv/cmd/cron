@@ -1,0 +1,24 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+
+space=$1
+
+function conf_list()
+{
+	$PHP $PATH_CORE/command/config.php --space=$space --file=cron --section=$1 --item=$2
+}
+
+for task in $(conf_list);do
+	clocks=$(conf_list $task clocks)
+	checks=$(conf_list $task checks)
+	timing=$(conf_list $task timing)
+	runURI=$(conf_list $task runURI)
+	checknow=$(date +$checks)
+	if [ $clocks ]; then
+		checknow=$(expr $checknow % $clocks)
+	fi
+	if [ "$checknow" == "$timing" ];then
+		echo "Start [$task] at $(date)"
+		$PATH_ROOT/cmd/run $space $runURI
+	fi
+done;

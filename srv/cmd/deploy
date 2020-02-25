@@ -1,0 +1,34 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+
+while getopts "m:" opt;do
+  case $opt in
+      m)
+	    case $OPTARG in
+			build)
+		  		$PATH_ROOT/cmd/build
+			;;
+			wiki)
+				cd $PATH_ROOT/../wiki/
+				git pull
+				echo "update wiki."
+				exit
+			;;
+		esac
+	  ;;
+  	\?)
+	  echo "Invalid option: -$OPTARG"
+  	  ;;
+   esac
+done
+
+$PATH_ROOT/cmd/update $*
+
+dbcheck=$($PATH_ROOT/cmd/run _ /cli/mysql-check)
+
+if [ "$dbcheck" != "" ]; then
+	echo "Database inconsistent! Please run mysql-check."
+	exit
+fi
+
+$PATH_ROOT/cmd/release $*

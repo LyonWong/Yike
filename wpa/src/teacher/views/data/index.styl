@@ -1,0 +1,71 @@
+.data-center
+  padding: 0;
+  background: #fff;
+  .data-title
+    padding: 20px 20px 20px 0;
+    font-weight: bold;
+    a
+     color: #3c4a55;
+    >*
+      cursor: pointer;
+  .data-course
+    padding: 0 20px;
+    ul
+      margin: 0;
+      padding: 0;
+      li
+        display: -webkit-box;
+        display: box;
+        padding: 18px 15px;
+        border-bottom: 1px solid #E3E3E3;
+        line-height: 26px;
+        -webkit-box-align: center;
+        box-align: center;
+        //&:nth-child(2n+3)
+        //  background: #fff;
+        a
+          text-decoration: none;
+          color: #12B7F5;
+        &.total
+          background: #FAFAFB;
+          .handle
+            background: #FAFAFB;
+        &:hover
+          background: #FAFAFB;
+          .handle
+            background: #FAFAFB;
+        &.head
+          padding: 10px 15px;
+          border-top: 1px solid #E3E3E3;
+          border-bottom: 0 none;
+          >*{
+            color: #3C4A55;
+            font-size: 16px;
+          }
+          >*
+            color: #3C4A55;
+        >*
+          display: -webkit-box;
+          display: box;
+          -webkit-box-flex: 1;
+          box-flex: 1;
+          width: 150px;
+          color: #757F98;
+          justify-content: center;
+          word-break: break-all;
+          font-size: 14px;
+          &:first-child
+            -webkit-box-pack: initial;
+            -ms-flex-pack: initial;
+          &:last-child
+            width: 250px;
+        .handle
+          .button
+            padding: 4px 15px;
+            background: #EFEFF4;
+            color: #757F98;
+            border-radius: 6px;
+            -webkit-border-radius: 20px;
+            &:hover
+              background: #12b7f5;
+              color: #fff;

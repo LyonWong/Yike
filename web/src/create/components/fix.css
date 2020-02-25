@@ -1,0 +1,21 @@
+
+@media screen and (min-aspect-ratio: 4/3) {
+  html {
+    background: #000;
+  }
+  body {
+    max-width: none !important;
+    margin-left: 7.51rem;
+    background: #fcf;
+  }
+  .gap {
+    display: none;
+  }
+  .c-create-editor {
+    left: 0;
+    height: 100%;
+  }
+  .editor {
+    height: 100% !important;
+  }
+}

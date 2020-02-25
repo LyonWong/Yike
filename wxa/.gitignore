@@ -1,0 +1,4 @@
+*.swp
+.idea
+config.js
+project.config.json

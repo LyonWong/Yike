@@ -1,0 +1,94 @@
+@import '~@lib/css/index.styl';
+
+.user-center
+  padding: 0;
+  padding-bottom: 106px;
+  background: #EFEFF4;
+  .user-img
+    height: 360px;
+    background: url(userCenterImg) no-repeat;
+    background-size:100% auto;
+
+    >*
+      text-align: center
+
+    .name
+      px2px(font-size, 40px);
+      px2px(line-height, 40px);
+    .listen
+      padding-top: 10px;
+      color: #666;
+      px2px(font-size, 28px);
+      px2px(line-height, 28px);
+    img
+      margin: 50px 0 15px;
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+
+  ul
+    margin: 0;
+    margin-bottom: 20px;
+    background: #fff;
+
+    li
+      position: relative;
+      padding: 40px 20px;
+      line-height: 1;
+      list-style-type: none;
+      px2px(font-size, 32px);
+
+      a
+        display: block;
+        text-decoration: none;
+        tap-highlight-color: transparent;
+        -webkit-tap-highlight-color: transparent;
+      .iconfont
+        margin-right: 20px;
+        vertical-align: sub;
+        px2px(font-size, 38px);
+        &.icon-follow
+          color: #AAAAAA;
+        &.icon-buy
+          color: #AAAAAA;
+        &.icon-info
+          color: #2DC17B;
+        &.icon-qianbao1
+          color: #AAAAAA;
+        &.icon-cloud-we
+          color: #AAAAAA;
+          px2px(font-size, 42px);
+          &:before
+            display: inline-block;
+            margin-top: 5px;
+        &.icon-comment
+          color: #AAAAAA;
+          px2px(font-size, 36px);
+        &.icon-youhuiquan
+          color: #AAAAAA;
+          px2px(font-size, 40px);
+        &.icon-laoshi
+          color: #AAAAAA;
+          px2px(font-size, 36px);
+      span
+        color: #3c4a55;
+        vertical-align: middle;
+        &.arrow
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          px2px(top, 54px);
+          px2px(right, 20px);
+          &:after
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-right: 4px solid #9ca7c1;
+            border-top: 4px solid #9ca7c1;
+            -webkit-transform: rotate(45deg); /*箭头方向可以自由切换角度*/
+            transform: rotate(45deg);
+
+    li+li
+      border-top: 1px solid #EFEFF4;

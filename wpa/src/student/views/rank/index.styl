@@ -1,0 +1,156 @@
+@import '~@lib/css/index.styl';
+
+.rank
+  px2px(font-size, 36px);
+  .rank-con
+    .rank-title
+      padding: 32px 28px;
+      background: #fff;
+      .rank-image
+        position: relative;
+        padding-left: 112px;
+        span.img
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 86px;
+          height: 86px;
+          img
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+      .rank-text
+        >:first-child
+          padding-bottom: 23px;
+          px2px(font-size, 34px);
+        >:last-child
+          color: #aaa;
+          px2px(font-size, 26px);
+          >span
+            color: #fb6666;
+      .cur-rank
+        position: absolute;
+        color: #aaa;
+        text-align: center;
+        line-height: 1.6;
+        px2px(top, 40px);
+        px2px(right, 32px);
+        px2px(font-size, 30px);
+        >span
+          color: #fb6666;
+          px2px(font-size, 36px);
+        button
+          padding: 10px 20px;
+          color: #128ADF;
+          background: #E6F3FC;
+          border: 1px solid #4DA9EB;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          px2px(font-size, 30px);
+    ._v-container
+      .loading-layer
+        height: 200px !important;
+      >._v-content>.loading-layer .spinner-holder .spinner
+        width: 64px;
+        height: 64px;
+      >div
+        -webkit-overflow-scrolling: touch;
+    .no-data-text
+      px2px(font-size, 32px);
+  .tips
+    margin: 20px 0;
+    color: #666;
+    text-align: center;
+    px2px(font-size, 32px);
+  ul
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    list-style-type: none;
+    li
+      padding: 0 28px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      .rank-list
+        .rank-left
+          display: -webkit-flex;
+          display: flex;
+          justify-content: center;
+          >*
+            display: -webkit-flex;
+            display: flex;
+            margin-right: 20px;
+            justify-content: center;
+            align-items:center;
+          .no-other
+            padding: 0 20px 0 22px;
+          img
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+          .iconfont
+            px2px(font-size, 58px);
+          .no1
+            .iconfont
+              color: #fcd002;
+          .no2
+            .iconfont
+              color: #ceced0;
+          .no3
+            .iconfont
+              color: #aa8b77;
+        .invitations
+          >span
+            display: -webkit-flex;
+            display: flex;
+            align-items:center;
+            height: 90px;
+            color: #999;
+            .rank-score
+              color: #fb6666;
+      >:last-child
+        padding: 26px 0;
+        px2px(font-size, 30px);
+      &:last-child
+        border-bottom: 0 none;
+.body-pc
+  .rank
+    .rank-con
+      .rank-title
+        .rank-image
+          padding-left: 70px;
+          span.img
+            width: 53px;
+            height: 53px;
+        .rank-text
+          >:first-child
+            px2px(font-size, 34px);
+          >:last-child
+            px2px(font-size, 26px);
+        .cur-rank
+          top: 28px;
+          right: 45px;
+          line-height: 1.6;
+          px2px(font-size, 30px);
+          >span
+            px2px(font-size, 36px);
+      ul
+        li
+          .rank-list
+            .rank-left
+              .no-other
+                padding: 0 9px 0 11px;
+              img
+                width: 53px;
+                height: 53px;
+              >:last-child
+                font-size: 18px;
+            .invitations
+              >span
+                height: 46px;
+                font-size: 18px;
+.footer
+  display: none;
+

@@ -1,0 +1,335 @@
+{
+  "error": "0",
+  "message": "success",
+  "data": {
+    "benefits": {
+      "discount": 0,
+      "commission": 2
+    },
+    "cards": [
+      {
+        "icon": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+        "base": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.jpg",
+          "size": [
+            1080,
+            1920
+          ],
+          "btn": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg"
+        },
+        "qrcode": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            200,
+            200
+          ],
+          "offset": [
+            750,
+            1630
+          ]
+        },
+        "avatar": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            150,
+            150
+          ],
+          "offset": [
+            200,
+            500
+          ]
+        },
+        "desc": [
+          {
+            "text": "This is desc~",
+            "font": "80px sans-serif",
+            "style": "#00f",
+            "align": "left",
+            "bsline": "top",
+            "rotate": 0.5,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+        "base": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma2.jpg",
+          "size": [
+            1080,
+            1920
+          ],
+          "btn": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.2.jpg"
+        },
+        "qrcode": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            200,
+            200
+          ],
+          "offset": [
+            750,
+            1630
+          ]
+        },
+        "avatar": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            150,
+            150
+          ],
+          "offset": [
+            200,
+            500
+          ]
+        },
+        "desc": [
+          {
+            "text": "This is desc",
+            "font": "80px sans-serif",
+            "style": "#00f",
+            "align": "left",
+            "bsline": "top",
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+        "base": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.jpg",
+          "size": [
+            1080,
+            1920
+          ],
+          "btn": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg"
+        },
+        "qrcode": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            200,
+            200
+          ],
+          "offset": [
+            750,
+            1630
+          ]
+        },
+        "avatar": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            150,
+            150
+          ],
+          "offset": [
+            200,
+            500
+          ]
+        },
+        "desc": [
+          {
+            "text": "This is desc",
+            "font": "80px sans-serif",
+            "style": "#00f",
+            "align": "left",
+            "bsline": "top",
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+        "base": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.jpg",
+          "size": [
+            1080,
+            1920
+          ],
+          "btn": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg"
+        },
+        "qrcode": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            200,
+            200
+          ],
+          "offset": [
+            750,
+            1630
+          ]
+        },
+        "avatar": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            150,
+            150
+          ],
+          "offset": [
+            200,
+            500
+          ]
+        },
+        "desc": [
+          {
+            "text": "This is desc",
+            "font": "80px sans-serif",
+            "style": "#00f",
+            "align": "left",
+            "bsline": "top",
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+        "base": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.jpg",
+          "size": [
+            1080,
+            1920
+          ],
+          "btn": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg"
+        },
+        "qrcode": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            200,
+            200
+          ],
+          "offset": [
+            750,
+            1630
+          ]
+        },
+        "avatar": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            150,
+            150
+          ],
+          "offset": [
+            200,
+            500
+          ]
+        },
+        "desc": [
+          {
+            "text": "This is desc",
+            "font": "80px sans-serif",
+            "style": "#00f",
+            "align": "left",
+            "bsline": "top",
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+        "base": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.jpg",
+          "size": [
+            1080,
+            1920
+          ],
+          "btn": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg"
+        },
+        "qrcode": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            200,
+            200
+          ],
+          "offset": [
+            750,
+            1630
+          ]
+        },
+        "avatar": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            150,
+            150
+          ],
+          "offset": [
+            200,
+            500
+          ]
+        },
+        "desc": [
+          {
+            "text": "This is desc",
+            "font": "80px sans-serif",
+            "style": "#00f",
+            "align": "left",
+            "bsline": "top",
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+        "base": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.jpg",
+          "size": [
+            1080,
+            1920
+          ],
+          "btn": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg"
+        },
+        "qrcode": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            200,
+            200
+          ],
+          "offset": [
+            750,
+            1630
+          ]
+        },
+        "avatar": {
+          "src": "http://storage.sandbox.yike.fm/activity/tiaoxingma1.1.jpg",
+          "size": [
+            150,
+            150
+          ],
+          "offset": [
+            200,
+            500
+          ]
+        },
+        "desc": [
+          {
+            "text": "This is desc",
+            "font": "80px sans-serif",
+            "style": "#00f",
+            "align": "left",
+            "bsline": "top",
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

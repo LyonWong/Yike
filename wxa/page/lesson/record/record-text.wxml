@@ -1,0 +1,5 @@
+<template name="record-text">
+  <view class="record-text">    
+    <text>{{content.data}}</text>
+  </view>
+</template>

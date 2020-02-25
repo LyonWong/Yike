@@ -1,0 +1,38 @@
+{
+  "error": "0",
+  "message": "success",
+  "data": {
+    "stats": {
+      "score": 4.6,
+      "turnout": 14
+    },
+    "list": [
+      {
+        "cursor": 971,
+        "remark": "",
+        "reply": null,
+        "score": 5,
+        "tms": "2018-04-22 23:31",
+        "tms_reply": "2018-04-22 23:31:11",
+        "user": {
+          "sn": "U5a6d20e184f07",
+          "name": "杜鹏",
+          "avatar": "https://storage.yike.fm/user/U5a6d20e184f07/avatar!avatar?1ddofqg"
+        }
+      },
+      {
+        "cursor": 972,
+        "remark": "",
+        "reply": null,
+        "score": 5,
+        "tms": "2018-04-22 23:31",
+        "tms_reply": "2018-04-22 23:31:11",
+        "user": {
+          "sn": "U5a6d20e184f07",
+          "name": "杜非",
+          "avatar": "https://storage.yike.fm/user/U5a6d20e184f07/avatar!avatar?1ddofqg"
+        }
+      }
+    ]
+  }
+}

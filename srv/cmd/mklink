@@ -1,0 +1,15 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+
+space=$1
+echo $space
+
+if [ ! $space ]; then
+	read -p "Please input space: " space
+fi
+
+cd $PATH_ROOT/$space/public
+ln -s ../view/assets 
+cd ../view/assets
+ln -s ../../../resource
+

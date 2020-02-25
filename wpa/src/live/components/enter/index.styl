@@ -1,0 +1,32 @@
+@import '~@lib/css/index.styl';
+
+.l-entering
+  height: 100%;
+
+.l-enter
+  height: 100%;
+  &.entering
+    display: none;
+
+.l-teacher, .l-student
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: hidden;
+
+.is-pc
+  .l-teacher, .l-student
+    .title
+      width: 889px;
+      font-size: 14px;
+      &.title-lesson
+        font-size: 16px;
+  .l-teacher
+    padding-left: 290px;
+    >.title
+      padding: 10px;
+      background: #fff;
+      border-radius: 4px;

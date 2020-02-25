@@ -1,0 +1,10 @@
+/* page/pay/index.wxss */
+.panel-head {
+  justify-content: space-between
+}
+.prime-price {
+  text-decoration: line-through
+}
+.current-price {
+  color: #f00;
+}

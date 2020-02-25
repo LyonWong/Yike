@@ -1,0 +1,322 @@
+@import '~@lib/css/index.styl';
+
+.rd-container {
+        width: 100%;
+        height: 100%;
+        px2px(font-size, 32px);
+    }
+    .rd-audio-player {
+        position: relative;
+        margin: -5px 0 0 -10px;
+        padding: 5px;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+
+        .icon-dot {
+          position: absolute;
+          top: -20px;
+          right: -30px;
+          width: 10px;
+          height: 10px;
+
+          &:before {
+            color: red;
+            px2px(font-size, 42px);
+          }
+        }
+    }
+    .rd-audio-cover {
+        position: relative;
+        height: 100%;
+        width: 75px;
+    }
+    .rd-audio-player-btn {
+        position: absolute;
+        left: 4px;
+        width: 55px;
+        height: 58px;
+        border: none;
+        padding: 1px;
+        margin: -2px 0 0 -2px;
+        background: transparent;
+        outline: none;
+        px2px(top, -4px);
+
+        &:before {
+          display: block;
+          font-family: "iconfont" !important;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          color: #12b7f5;
+          content: "\e60a";
+          px2px(font-size, 50px);
+        }
+        &.pause {
+          &:before{
+            content: "\e60d";
+          }
+        }
+    }
+    .rd-audio-player-icon {
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -1px 0 0 -.7px;
+    }
+    .rd-audio-contrl {
+        position: relative;
+        width: 370px;
+        display: -webkit-box;
+        display: box;
+        color: #666;
+        height: 50px;
+        padding: .5px;
+        overflow: hidden;
+    }
+    .rd-audio-slider-container {
+        display: -webkit-box;
+        display: box;
+        width: 190px;
+        margin-top: 20px;
+        margin-right: 15px;
+    }
+    .rd-audio-slider-header{
+      width :2px;
+      height :15%;
+      background: #2f57da;
+    }
+
+    .rd-audio-slider {
+        position: relative;
+        width: 100%;
+    }
+    .rd-audio-slider-rail {
+        width: 100%;
+        height: 4px;
+        background: #B2BEEF;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+    }
+    .rd-audio-slider-rail-inner {
+        position :relative;
+        height: 100%;
+        width: 0%;
+        background: #2f57da;
+        transition: width 16ms;
+    }
+    .rd-audio-slider-rail-inner:after {
+        content :'';
+        width :3px;
+        height:10px;
+        background #2f57da;
+        position absolute;
+        top -3px;
+        right -3px;
+    }
+    .rd-audio-time.current,
+    .rd-audio-time.duration {
+        display: -webkit-box;
+        display: box;
+        padding-top: 0px;
+        color: #aaaaaa;
+        px2px(font-size, 24px)
+    }
+    .bounce-transition {
+        animation-duration: .75s;
+        animation-fill-mode: both;
+    }
+    .bounce-enter {
+        animation-name: bounceIn;
+    }
+    .bounce-leave {
+        animation-name: bounceOut;
+    }
+    .buffer {
+      position: absolute;
+      top: 0;
+      right: -70px;
+      width: 50px;
+      height: 50px;
+      -webkit-transition: all 0.3s ease-in-out 0;
+      transition: all 0.3s ease-in-out 0;
+
+      .double-bounce1, .double-bounce2 {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #333;
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+        animation: sk-bounce 2.0s infinite ease-in-out;
+      }
+      .double-bounce2 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+      }
+    }
+    @-webkit-keyframes bounceIn {
+      from, 20%, 40%, 60%, 80%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      }
+      0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+      }
+      20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+      40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9);
+      }
+      60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+      }
+      80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97);
+      }
+      to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+    }
+    @keyframes bounceIn {
+      from, 20%, 40%, 60%, 80%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      }
+      0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+      }
+      20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+      40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9);
+      }
+      60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+      }
+      80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97);
+      }
+      to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+    }
+    @-webkit-keyframes bounceOut {
+      20% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9);
+      }
+      50%, 55% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+      to {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+      }
+    }
+    @keyframes bounceOut {
+      20% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9);
+      }
+      50%, 55% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+      to {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+      }
+    }
+
+    @-webkit-keyframes sk-bounce {
+      0%, 100% { -webkit-transform: scale(0.0) }
+      50% { -webkit-transform: scale(1.0) }
+    }
+
+    @keyframes sk-bounce {
+      0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+      } 50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+      }
+    }
+
+.is-pc {
+  .rd-audio-player {
+    padding: 0;
+    height: 30px;
+
+    .icon-dot {
+      top: -10px;
+      right: -28px;
+    }
+  }
+  .rd-audio-cover {
+    width: 45px;
+  }
+  .rd-audio-player-btn {
+    width: 30px;
+    height: 30px;
+    top: 4px;
+    left: 7px;
+  }
+  .rd-audio-player-btn:before{
+    background :#2F57DA;
+    color :#fff;
+    border-radius :30px
+  }
+  .rd-audio-contrl {
+    margin-top: -7px;
+    width: auto;
+    .rd-audio-slider-container {
+      margin-top: 22px;
+      margin-right: 10px;
+      width: 120px;
+    }
+    .rd-audio-time.current,
+    .rd-audio-time.duration {
+      margin-top: 8px;
+      padding-top: 4px;
+      font-size: 12px;
+    }
+  }
+  .buffer{
+    right: -32px;
+    width: 20px;
+    height: 20px;
+  }
+}

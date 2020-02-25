@@ -1,0 +1,5 @@
+<template name="record-image">
+<view class="redio-image">
+<image mode='aspectFit' src="{{content.data}}!preview" bindtap="bindImagePreview" data-url="{{content.data}}"></image>
+</view>
+</template>

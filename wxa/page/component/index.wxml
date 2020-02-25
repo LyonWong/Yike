@@ -1,0 +1,5 @@
+<view class="index">
+    <view class="body">
+        <web-view src="{{studentUrl}}" wx:if="{{studentUrl}}"></web-view>
+    </view>
+</view>

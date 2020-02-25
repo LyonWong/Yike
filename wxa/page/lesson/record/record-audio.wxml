@@ -1,0 +1,5 @@
+<template name="record-audio">
+<view class="record-audio">
+  <audio id="av-{{cursor}}" src="{{content.data}}" controls='true' name='' author='' poster='{{content.data}}-preview.jpg' binderror='audioError' bindplay='bindAudioPlay' bindended='bindAudioEnd' data-avpos="{{content.avpos}}"></audio>
+</view>
+</template>

@@ -1,0 +1,51 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+
+cd $PATH_ROOT
+verhead=`git log --format=%h -n1`
+version=$verhead
+deployer=`whoami`
+
+if [ $deployer != $RELEASE_USR ]; then
+	echo "Must execute by '$RELEASE_USR'"
+	exit
+fi
+
+while getopts "u:v:" opt; do
+	case $opt in
+		u)
+			deployer=$OPTARG
+			;;
+		v)
+			version=$OPTARG
+			;;
+		\?)
+			echo "Invalid option: -$OPTARG"
+			;;
+	esac
+done
+
+cd $PATH_ROOT
+if [ $version != $verhead ]; then
+	git checkout $version
+fi
+
+cd $RELEASE_DIR
+
+target="$RELEASE_DIR/commit-$version"
+if [ -d $target ]; then
+	rm -rf $target
+fi
+    mkdir -p $target
+	cp -ra $PATH_ROOT/* $target
+	#chown :$RELEASE_GRP $target -R
+	exps=`ls commit-* -trd | head -n -$RELEASE_VOL`
+	rm -rf $exps
+	echo "Release @$(date) commit-$version" > $target/version
+	msg="$(date), Release to $target, Remove '$exps', By '$deployer'"
+
+rm -f release
+ln -s "commit-$version" release
+$PATH_ROOT/cmd/daemon -c restart >> $RELEASE_DIR/daemon.log
+/sbin/service $PHP_FPM reload
+echo $msg | tee -a $RELEASE_DIR/history.log

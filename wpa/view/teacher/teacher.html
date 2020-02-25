@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>老师</title>
+  <style>
+    html, body {
+      background: #f0eff5;
+      height: 100%;
+    }
+
+    #loader {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 128px;
+    }
+
+    #loader > img {
+      -webkit-animation: animate 6s infinite ease-in-out;
+      animation: animate 6s infinite ease-in-out;
+    }
+
+    #loader > span {
+      padding: 32px;
+      color: #2F57DA;
+      font-weight: bold;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+      }
+      25% {
+        transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+      }
+      50% {
+        transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+      }
+      75% {
+        transform: perspective(160px) rotateX(0deg) rotateY(-180deg);
+      }
+      100% {
+        transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="app" style="display: flex; flex-direction: column; justify-content: center; height: 100%">
+  <div id="loader">
+    <img src="https://assets.yike.fm/img/logo/Original_6464@2x.png"/>
+    <span>易灵微课</span>
+  </div>
+</div>
+<!--recorderjs-->
+<script type="text/javascript"
+        src="http://assets.sandbox.yike.fm/static/teacher/_static/teacher/js/recorderjs/recorder.min.js"></script>
+<!-- built files will be auto injected -->
+</body>
+</html>

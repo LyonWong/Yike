@@ -1,0 +1,18 @@
+<!--page/lesson/play.wxml-->
+<import src="./record/record.wxml"/>
+<view id="edge"></view> 
+<view class="frm-flex flex-col">
+  <view id="teacher" class="flex-row">
+    <view>
+      <image src="{{profile.teacher.avatar}}!avatar" class="avatar-image"></image>
+    </view>
+    <view>
+      <text>{{profile.teacher.name}}</text>
+    </view>
+  </view>
+  <view id="records" bind:touchend="bindRecordsTouch">
+    <view class="record" wx:key="cursor" wx:for="{{records}}" id="record-{{item.cursor}}">
+      <template is="record" data="{{...item, teacher: profile.teacher}}"></template>
+    </view>
+  </view>
+</view>

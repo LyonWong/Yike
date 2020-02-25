@@ -1,0 +1,19 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+res=$(ssh deploy@gitlab.eling.inc "cd ~/$RELEASE_WEB; ./make $RELEASE_NPM");
+if [ "$res"x = "Already up-to-date."x ]; then
+	echo "Web $res";
+else
+	#rm -rf $PATH_ROOT/_/view/assets/static/*
+	#scp -r deploy@gitlab.eling.inc:~/$RELEASE_WEB/dist/1.0.0/static/* $PATH_ROOT/_/view/assets/static/
+	rsync -vzr --delete deploy@gitlab.eling.inc:~/$RELEASE_WEB/dist/1.0.0/static/ $PATH_ROOT/_/view/assets/static/
+fi
+
+res=$(ssh deploy@gitlab.eling.inc "cd ~/$RELEASE_VUE; ./make");
+if [ "$res"x = "Already up-to-date."x ]; then
+	echo "Vue $res";
+else
+	#rm -rf $PATH_ROOT/_/view/assets/source/*
+	rsync -vzr --delete deploy@gitlab.eling.inc:~/$RELEASE_VUE/dist/source/ $PATH_ROOT/_/view/assets/source/
+	rsync -vzr --delete deploy@gitlab.eling.inc:~/$RELEASE_VUE/dist/entry/ $PATH_ROOT/_/view/template/entry/
+fi

@@ -1,0 +1,352 @@
+@import '~@lib/css/index.styl';
+
+.content
+  padding: 0;
+  px2px(font-size, 32px);
+
+  .color-9ca7c1
+    color: #9ca7c1;
+  .color-70788c
+    color: #70788c;
+  &.detail
+    padding-bottom: 100px;
+    background: #f0eff5;
+    .detail-img
+      width: 100%;
+      //height: 420px;
+      background: #fff;
+      overflow: hidden;
+      img
+        width: 100%;
+        max-height: 530px;
+      img[lazy=error]
+        display: none;
+    .tab
+      display: -webkit-box;
+      display: box;
+      height: 88px;
+      background: #fff;
+      border-bottom: 1px solid #e6eaf2;
+      px2px(line-height, 88px);
+      >*
+        display: -webkit-box;
+        display: box;
+        -webkit-box-flex: 1;
+        box-flex: 1;
+        margin: 0 40px;
+        justify-content: center;
+        text-decoration: none;
+        color: #3c4a55;
+        border-bottom: 2px solid #fff;
+        &.active
+          color: #12b7f5;
+          border-color: #12b7f5;
+    .brief-info
+      padding: 0 30px;
+      background: #fff;
+      border-bottom: 1px solid #e6eaf2;
+
+      h4
+        margin: 0;
+        padding: 35px 0;
+        px2px(font-size, 36px);
+      h5
+        margin: 0;
+        padding: 35px 0;
+        font-weight: normal;
+        px2px(font-size, 38px);
+      .info-series
+        padding: 0 0 25px;
+        color: #666;
+        .info-name
+          color: #0775d0;
+      .info-detail
+        display: -webkit-box;
+        display: box;
+        padding-bottom: 24px;
+        px2px(font-size, 30px);
+        >*
+          display: block;
+          color: #666;
+          -webkit-box-flex: 1;
+          box-flex: 1;
+          //justify-content: center;
+        .iconfont
+          px2px(font-size, 28px);
+          &.icon-people
+            px2px(font-size, 32px);
+            position right;
+          &.icon-xueyuan1
+            px2px(font-size, 32px);
+            position right;
+          &.icon-jishiqi
+            display: inline-block;
+            transform: scale(1.48,1.48);
+            -ms-transform: scale(1.48,1.48);
+            -moz-transform: scale(1.48,1.48);
+            -webkit-transform: scale(1.48,1.48);
+            -o-transform: scale(1.48,1.48);
+        >:last-child
+          text-align: right;
+      .info-detail+.info-detail, .info-detail.underline
+        border-bottom: 1px solid #d9d9d9;
+      .info-price
+        position: relative;
+        margin: 0;
+        padding: 40px 0;
+        .price
+          color: #FB6666;
+          px2px(font-size, 42px);
+          em
+            color: #9CA7C1;
+            text-decoration:line-through;
+            px2px(font-size, 32px);
+        .price-free
+          color: #2dc17b;
+          px2px(font-size, 32px);
+          em
+            color: #9CA7C1;
+            text-decoration:line-through;
+            px2px(font-size, 32px);
+        .guarantee, .g-refund
+          position: absolute;
+          right: 0;
+          padding: 12px 18px;
+          background: #f7f9fc;
+          border-radius: 50px;
+          -webkit-border-radius: 50px;
+          color: #3c4a55;
+          px2px(top, 28px);
+          &:after
+            position: relative;
+            margin-top: -12px;
+            margin-left: 15px;
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            vertical-align: middle;
+            border-right: 4px solid #3c4a55;
+            border-top: 4px solid #3c4a55;
+            -webkit-transform: rotate(135deg); /*箭头方向可以自由切换角度*/
+            transform: rotate(135deg);
+          &.g-unfold
+            &:after
+              margin-top: 0px;
+              -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+        .reward
+          position: absolute;
+          right: 0;
+          padding: 12px 18px;
+          color: #fb6666;
+          background: #fff6f6;
+          border: 1px solid #fb6666;
+          border-radius: 50px;
+          -webkit-border-radius: 50px;
+          cursor: pointer;
+          px2px(top, 28px);
+          .iconfont
+            px2px(font-size, 32px);
+        .g-refund
+          px2px(right, 200px);
+          &:after
+            display: none;
+      .guarantee-text
+        padding: 20px 0;
+        px2px(font-size, 28px);
+        dl
+          display: flex;
+          display: -webkit-flex;
+          margin: 0;
+          padding: 5px 0;
+          dt,dd
+            display: flex;
+            display: -webkit-flex;
+          /*dt
+            color: #3c4a55;*/
+          dd
+            margin-left: 0;
+            -webkit-flex: 1;
+            flex: 1;
+    .lesson-brief
+      margin-top: 20px;
+      background: #fff;
+      border-top: 1px solid #e6eaf2;
+      .brief-title
+        padding: 30px;
+        color: #333;
+        border-bottom: 1px solid #e6eaf2;
+        px2px(font-size, 36px);
+      .brief-con
+        position: relative;
+        padding: 30px;
+        .guarantee-text
+          px2px(font-size, 28px);
+          dl
+            display: flex;
+            display: -webkit-flex;
+            margin: 0;
+            padding: 5px 0;
+            dt,dd
+              display: flex;
+              display: -webkit-flex;
+            /*dt
+              color: #3c4a55;*/
+            dd
+              margin-left: 0;
+              -webkit-flex: 1;
+              flex: 1;
+      p
+        margin: 0;
+        padding: 30px 0;
+        color: #666;
+    em
+      color: #12B7F5;
+      font-style: normal;
+    .title
+      padding: 10px;
+    button
+      px2px(font-size, 28px);
+
+    .content-notice
+      padding: 30px;
+      //background: #fff;
+
+      dl
+        px2px(margin-bottom,5px);
+        px2px(margin-top,5px);
+        px2px(line-height, 46px);
+        px2px(font-size, 32px);
+        dt
+          color: #3C4A55;
+        dd
+          px2px(line-height, 46px);
+          px2px(margin-left,46px);
+          color: #70788C;
+    .unfold
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      width: 100%;
+      color: #12b7f5;
+      text-align: center;
+      &:after
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10px;
+        bottom: 0;
+        content: '';
+        z-index: 1;
+        background: #fff;
+        -webkit-mask-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#ff0000), to(rgba(0, 0, 255, 0)));
+      .iconfont
+        px2px(font-size, 32px);
+      .icon-chevron-down, .icon-chevron-up
+        px2px(font-size, 50px);
+    .b-text
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: initial;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      px2px(font-size, 30px);
+      px2px(line-height, 38px);
+      &.fold
+        -webkit-line-clamp: 5;
+    .lesson-more
+      margin-top: 20px;
+      color: #12b7f5;
+      >*
+        padding: 30px 0;
+        color: #333;
+        background: #fff;
+        text-align: center;
+      >div+div
+        border-top: 1px solid #d9d9d9;
+  .series
+    margin: 0 0 20px;
+    background: #fff;
+    .series-title
+      position: relative;
+      padding: 30px;
+      border-bottom: 1px solid #d9d9d9;
+      color: #3c4a55;
+      px2px(font-size, 36px);
+  .ranks
+    margin: 0 0 20px;
+    background: #fff;
+    .ranks-wrap
+      position: relative;
+      padding: 24px 30px;
+      border-bottom: 1px solid #d9d9d9;
+      color: #3c4a55;
+      line-height: 1.4;
+      px2px(font-size, 36px);
+      .ranks-img
+        padding-right: 40px;
+        >span
+          display: inline-block;
+          padding-right: 8px;
+          width: 48px;
+          height: 48px;
+          overflow: hidden;
+          vertical-align: middle;
+          img
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+  span.arrow
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    px2px(top, 42px);
+    px2px(right, 20px);
+    &:after
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-right: 4px solid #9ca7c1;
+      border-top: 4px solid #9ca7c1;
+      -webkit-transform: rotate(45deg); /*箭头方向可以自由切换角度*/
+      transform: rotate(45deg);
+  .evaluate-area
+    margin: 0 0 20px;
+    background: #fff;
+    .area-title
+      position: relative;
+      padding: 30px;
+      border-bottom: 1px solid #d9d9d9;
+      &:only-child
+        border-bottom: 0 none;
+      .e-score
+        color: #3c4a55;
+        px2px(font-size, 36px);
+        >span
+          color: #fb6666;
+      span.e-enter
+        position: absolute;
+        color: #aaa;
+        px2px(top, 26px);
+        px2px(right, 20px);
+        px2px(font-size, 30px);
+        .iconfont
+          px2px(font-size, 36px);
+.body-pc
+  .evaluate-area
+    .area-title
+      span.e-enter
+        px2px(top, 60px);
+        px2px(right, 20px);
+  .ranks
+    .ranks-wrap
+      .ranks-img
+        padding-right: 30px;
+        >span
+          width: 30px;
+          height: 30px;
+  span.arrow
+    px2px(top, 62px);

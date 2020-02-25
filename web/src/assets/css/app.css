@@ -1,0 +1,30 @@
+/*@import "font.css";*/
+html {
+  height: 100%;
+}
+body {
+  margin: 0 auto;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.c-index {
+  height: 100%;
+}
+
+.flex-row {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-item {
+  flex-grow: 1;
+}

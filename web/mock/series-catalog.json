@@ -1,0 +1,31 @@
+{
+  "error": "0",
+  "message": "success",
+  "data": [
+    {
+      "title": "Facebook Advertise",
+      "cover": "http://storage.yike.fm/lesson/cover/5a98b4e0437ab",
+      "target": "/lesson/detail?sn=xxx",
+      "series": "Facebook",
+      "teacher": "fish",
+      "progress": [1, 1],
+      "status": "finish",
+      "enrollment": 1232,
+      "price": 200,
+      "start_time": "2018-04-01 20:00"
+    },
+    {
+      "title": "Facebook Advertise",
+      "cover": "http://storage.yike.fm/lesson/cover/5a98b4e0437ab",
+      "target": "/lesson/detail?sn=xxx",
+      "series": "Facebook",
+      "teacher": "fish",
+      "progress": [1, 0],
+      "status": "finish",
+      "enrollment": 1232,
+      "price": 200,
+      "start_time": "2018-04-01 20:00"
+    }
+  ]
+
+}

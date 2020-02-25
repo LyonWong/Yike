@@ -1,0 +1,77 @@
+/**
+    px2rem 自动将 px 转换成 rem
+    兼容报告： http://caniuse.com/#feat=rem
+
+    设置html的字体大小 font-size =10px 那么此时 1rem = 10px
+    小于 12px 或者 75% 的字体大小 rem 确实不支持这种换算
+*/
+html-font-size ?= 75px;
+// style-names ?= "min-height" "max-height" "min-width" "max-width" "width" "height" "border" "margin" "margin-top" "margin-bottom" "margin-left" "margin-right" "padding" "padding-left" "padding-right" "padding-bottom" "padding-top" "line-height"
+style-names ?= "min-height" "max-height" "min-width" "max-width" "width" "height" "border" "margin" "margin-top" "margin-bottom" "margin-left" "margin-right" "padding" "padding-left" "padding-right" "padding-bottom" "padding-top"
+// value less then ignore_limit will be ignored and return the original value
+px2rem_ignore_limit ?= 1
+
+px2rem(prop, values){
+    values-px = null;
+    values-rem = null;
+    need_normalize = prop in style-names
+    for value in values {
+        //match('-gradient\(', ''+arguments)
+        if (typeof(value) == 'unit' && value != 0 && match('px$',''+value)) {
+            if(abs(value) <= px2rem_ignore_limit){
+                value-rem = value;
+            }else if(need_normalize){
+                value-rem = unit(value / html-font-size,'rem');
+            }else{
+                value-rem = value;
+                //value-rem = unit(value ,'rem');
+            }
+            push(values-rem, value-rem)
+        } else {
+            push(values-rem, value)
+        }
+    }
+    {prop} : values-rem;
+}
+
+px2px(prop, values){
+    values-px = null;
+    values-px = round(values / 2) * 1px;
+    {prop} : values-px;
+
+    [data-dpr="2"] & {
+        values-px = values * 1px;
+        {prop}: values-px;
+    }
+    // for 华为荣耀8
+    [data-dpr="2.487499952316284"] & {
+      {prop}: round(values / 2 * 2.487499952316284) * 1px;
+    }
+    // for mx3
+    [data-dpr="2.5"] & {
+        {prop}: round(values / 2 * 2.5) * 1px;
+    }
+    // for 一加
+    [data-dpr="2.625"] & {
+      {prop}: round(values / 2 * 2.625) * 1px;
+    }
+    // for 坚果pro2s
+    [data-dpr="2.7"] & {
+        {prop}: round(values / 2 * 2.7) * 1px;
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        {prop}: round(values / 2 * 2.75) * 1px;
+    }
+    [data-dpr="3"] & {
+        {prop}: round(values / 2 * 3) * 1px
+    }
+    [data-dpr="3.5"] & {
+        {prop}: round(values / 2 * 3.5) * 1px
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        {prop}: values * 2px;
+    }
+
+}

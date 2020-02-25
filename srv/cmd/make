@@ -1,0 +1,3 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+$PHP "$PATH_ROOT/Core/command/make.php" --space=$1 ${*:2}

@@ -1,0 +1,42 @@
+工具目录结构：
+.
+├── README
+├── signature
+│     ├── linux-signature32
+│     └── linux-signature64
+├── TimRestApiConfig.json
+├── TimRestApiGear.php
+├── TimRestApi.php
+├── TimRestInterface.php
+
+signature文件夹 包含获取usrsig的脚本，在使用工具前需要确保该目录中对应文件的权限，
+比如linux64位则需要确保linux-signature64的权限为可执行。
+
+TimRestApiConfig.json 为该工具所需APP基础配置信息。
+
+TimRestApiGear.php 为使用接口示例工具
+
+TimRestApi.php 为接口具体实现。
+TimRestInterface.php 为访问rest api示例的接口集合。
+
+
+使用步骤:
+
+独立模式
+1.配置TimRestApiConfig.json文件，其中：
+identifier 为APP管理者账户；
+private_pem_path 为本地私钥位置；
+user_sig 请填""。
+2.查看signature文件夹中对应脚本使用权限，如果无可执行权限，需要修改权限使其可被执行。
+3.执行php TimRestApiGear.php 可看到该工具访问命令(用法)。
+
+托管模式
+1.配置TimRestApiConfig.json文件，其中：
+identifier 为APP管理者账户；
+user_sig 为托管模式用户下载到的用户凭证；
+private_pem_path 请填""。
+2.执行php TimRestApiGear.php 可看到该工具访问命令(用法)。
+
+
+
+

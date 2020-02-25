@@ -1,0 +1,1 @@
+export const CHANGE_HOME_INFO = 'CHANGE_HOME_INFO'

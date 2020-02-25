@@ -1,0 +1,16 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+
+cd $PATH_ROOT
+
+git pull
+
+cmd/make _ conf
+cmd/make Admin conf
+cmd/make Student conf
+cmd/make Teacher conf
+cmd/run _ /cli/-static
+cmd/make _ vmap
+cmd/make Admin vmap
+cmd/make Student vmap
+cmd/make Teacher vmap

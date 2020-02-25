@@ -1,0 +1,71 @@
+@import '~@lib/css/index.styl';
+
+.group
+  .group-create
+    padding: 30px 20px;
+    .create-order
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center;
+      -webkit-flex-direction: column;
+      height: 240px;
+      border: 2px dashed #999;
+      color: #999;
+      cursor: pointer;
+      px2px(font-size, 30px);
+      .iconfont
+        padding-bottom: 10px;
+        px2px(font-size, 36px);
+  div.lesson-more
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.3);
+    .more-container
+      position: absolute;
+      padding: 0;
+      width: 100%;
+      px2px(bottom, 98px);
+    div>*
+      padding: 30px 0;
+      color: #333;
+      background: #fff;
+      text-align: center;
+      border-top: 1px solid #d9d9d9;
+  .group-enroll
+    .enroll-wrap
+      .enroll-head
+        padding: 0 30px;
+        background: #fff;
+        .title
+          padding: 30px 0;
+          border-bottom: 1px solid #ddd;
+          px2px(font-size, 32px);
+
+.body-pc
+  .group
+    .group-create
+      .create-order
+        height: 200px;
+    div.lesson-more
+      left: 0;
+      bottom: 50px;
+    .button
+      margin: 0 auto;
+      width: 640px;
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .group {
+    div.lesson-more {
+      .more-container {
+        padding-bottom: 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+/* page/lesson/record.wxss */
+.record {
+  width: 100%;
+  border-bottom: solid 1rpx #eee;  
+}
+.record-content {
+  padding: 10rpx;
+}
+.record-avatar{
+  width: 100rpx;
+  height: 100rpx;
+}
+.record-avatar > image {
+  width: 100%;
+  height: 100%;
+}
+.record-info {
+  padding-left: 10rpx;
+}
+.record-info > text {
+  padding: 5rpx;
+}
+.info-time {
+  font-size: 10pt;
+  color: #333;
+}
+.record-content {
+  padding: 20rpx;
+}
+video {
+  width: 480rpx;
+  height: 270rpx;
+}

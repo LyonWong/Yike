@@ -1,0 +1,17 @@
+.idea/*
+*.vmap.*
+runtime
+version
+*/idx.php
+*/config/.conf/*.php
+*/config/local/*.*
+*/public/assets
+*/public/wiki
+*/view/assets/resource
+temp.php
+*/file/*.tmp
+*.undefined.ini
+*.swp
+*.cache
+!*/README.md
+!.gitignore

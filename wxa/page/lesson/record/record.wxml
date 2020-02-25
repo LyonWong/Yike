@@ -1,0 +1,23 @@
+<!--page/lesson/record.wxml-->
+<import src="record-text" />
+<import src="record-audio" />
+<import src="record-image" />
+<import src="record-video" />
+
+<template name="record">
+  <view class="record-haed frm-flex" wx:if="{{teacher.sn == user.sn}}">    
+    <text class="info-time">{{tms}}</text>
+  </view>
+  <view class="record-head frm-flex" wx:else>  
+    <view class="record-avatar">    
+      <image src="{{user.avatar}}!avatar" />
+    </view>
+    <view class="record-info frm-flex flex-col">
+      <text class="info-name">{{user.name}}</text>
+      <text class="info-time">{{tms}}</text>
+    </view>
+  </view>
+  <view class="record-content">  
+    <template is="record-{{content.type}}" data="{{cursor: cursor, content: content}}"></template>
+  </view>
+</template>

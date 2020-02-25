@@ -1,0 +1,9 @@
+<!--page/boot.wxml-->
+<view id="container" class="frm-flex flex-col flex-center">
+  <view id="icon">
+    <image mode="aspectFit" src="/resource/image/icon.png"></image>
+  </view>
+  <view id="title">
+    <text>欢迎来到易灵微课</text>
+  </view>  
+</view>

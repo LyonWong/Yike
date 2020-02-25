@@ -1,0 +1,49 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+
+RUNTIME_DIR=`$PHP $PATH_CORE/command/config.php --space=_ --file=boot --section=system --item=runtime`
+fpid=$RUNTIME_DIR/daemon.pid
+
+function d_start()
+{
+	nohup $PHP "$PATH_CORE/command/run.php" --space=_ /cli/daemon >> /tmp/yike-daemon.log 2>&1 &
+	echo $! > $fpid
+	echo "[$(date)] start daemon pid: $!"
+}
+
+function d_stop()
+{
+	if [ -f $fpid ]; then
+		pid=`cat $fpid`
+		kill $pid
+		rm -f $fpid
+		echo "[$(date)] stop daemon pid: $pid"
+	fi
+}
+
+while getopts ":c:" opt; do
+	case $opt in
+		c)
+			case $OPTARG in 
+				start)
+					d_start
+					;;
+				stop)
+					d_stop
+					;;
+				restart)
+					d_stop
+					d_start
+					;;
+				*)
+					echo "Invalid command '$OPTARG'"
+					exit
+			esac
+		;;
+		\?)
+			echo "Invalid option"
+			exit
+		;;
+	esac
+done
+

@@ -1,0 +1,25 @@
+.showIndexChart {cursor: pointer}
+.page-logo > a {color:#fff; font-family: cursive; font-size: 30px;text-decoration: none}
+.overflow-hidden {overflow: hidden;}
+
+/* image */
+.img-s {max-height:128px; max-width: 128px}
+
+/*table*/
+.datatable-hide-search .dataTables_filter {display:none}
+.table-scrollable .row {margin: 0}
+th.switcher {padding: 3px 8px 6px 8px !important;}
+th.switcher > select {padding: 3px 6px}
+.th-form {padding: 0 !important;}
+.th-form > select {border: 0 !important;}
+
+/*help*/
+.page-help {height:32px;font-size:20px; color: #777; margin:5px; cursor: pointer}
+.page-help.active {color: #9acfea;}
+.note-help {display:none}
+
+/*loading*/
+.loading-frame {position: relative; z-index:99; text-align: center}
+.loading-mask {position:absolute; top:0; left:0; opacity: 0.3; background: #000; width:100%; height: 100%}
+.loading-spin {position:absolute; top: 50%; color: #fff; width: 100%; margin: -30px auto 0;}
+.loading-spin .fa-spin {font-size: 500%}

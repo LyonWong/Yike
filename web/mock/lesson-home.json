@@ -1,0 +1,52 @@
+{
+  "error": "0",
+  "message": "success",
+  "data": {
+    "banners": [
+      {
+        "title": "生财有术",
+        "cover": "http://storage.yike.fm/lesson/cover/5a98b4e0437ab!cover",
+        "target": "/lesson/detail?sn=xxx",
+        "teacher": "亦仁",
+        "progress": [4, 4],
+        "status": "finish",
+        "enrollment": 1232,
+        "price": 200
+      }
+    ],
+    "blocks": [
+      {
+        "caption": "增广见闻",
+        "items": [
+          {
+            "title": "正本清源区块链",
+            "cover": "http://storage.yike.fm/lesson/cover/5a6c23a51ada2!cover",
+            "target": "/lesson/detail?sn=xxx",
+            "teacher": "caoz",
+            "progress": [1, 0],
+            "status": "opened",
+            "enrollment": 12342,
+            "price": 8
+          }
+        ],
+        "more": "/lesson/list?tag=horizon",
+      },
+      {
+        "caption": "实用技能",
+        "items": [
+          {
+            "title": "不用写代码的爬虫课"
+            "image": "http://storage.yike.fm/series/cover/5a23887b50cd4!cover",
+            "target": "/lesson/detail?sn=xxx",
+            "teacher": "明白",
+            "progress": [3, 1],
+            "status": "onlive",
+            "enrollment": 898,
+            "price": 99
+          }
+        ],
+        "more": "/lesson/list?tag=skills"
+      }
+    ]
+  }
+}

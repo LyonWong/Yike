@@ -1,0 +1,497 @@
+@import '~@lib/css/index.styl';
+
+.l-chatbox
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 15px 20px 15px 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  background: #fff;
+  z-index: 10;
+  .box
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+
+    >*
+      -webkit-flex: 1;
+      flex: 1;
+      border: 0 none;
+      height: 70px;
+      px2px(border-radius, 8px);
+      px2px(font-size, 30px);
+
+      &.box-more
+        margin-left: -15px;
+        button
+          width: 100%;
+          height: 100%;
+          border: 0 none;
+          background: transparent;
+          //border: 1px solid #12B7F5;
+          px2px(border-radius, 50%);
+        .iconfont
+          color: #999;
+          px2px(font-size, 40px);
+      &.box-msg
+        position: relative;
+        -webkit-flex: 6;
+        flex: 6;
+        color: #333;
+        overflow: auto;
+        overflow-x: hidden;
+        border: 1px solid #E6EAF2;
+        &.is-finish
+          visibility: hidden;
+        &.c-finish
+          button
+            background: #aaa;
+        &.open
+          -webkit-flex: 4.55;
+          flex: 4.55;
+
+        textarea, input
+          position: relative;
+          width: 100%;
+          height: 30px;
+          padding: 20px 10px;
+          border: 0 none;
+          resize: none;
+          background: #f7f9fc;
+
+          px2px(border-radius, 8px);
+          px2px(line-height, 30px);
+          px2px(font-size, 30px);
+        .reorder
+          position: absolute;
+          padding-right: 10px;
+          color: #ddd;
+          z-index: 6;
+          px2px(top, 5px);
+          px2px(bottom, 0px);
+          px2px(right, 0px);
+
+          >*
+            px2px(font-size, 50px);
+        .comment
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          background: #4da9eb;
+          border: 0 none;
+          z-index: 6;
+          border-radius: 12px;
+          px2px(font-size, 34px);
+      &.box-send
+        margin-left: 20px;
+        color: #fff;
+        background: #12B7F5;
+        &.sending
+          background: #eaeff7;
+
+    .more-choice {
+      position: absolute;
+      padding: 10px;
+      width: 180px;
+      height: auto;
+      background: #fff;
+      z-index: 7;
+      border: 1px solid #D0F1FD;
+      px2px(left, 10px);
+      px2px(bottom, 125px);
+
+      button {
+        width: 100%;
+        height: 80px;
+        border: 0 none;
+        background: #fff;
+        color: #3C4A55;
+        border-bottom: 1px solid #E6EAF2
+        px2px(font-size, 30px);
+        &:last-child {
+          border: 0 none;
+        }
+        .sItem {
+          display: -webkit-flex;
+          display: flex;
+          -webkit-align-items: center;
+          -webkit-justify-content: center;
+          align-items: center;
+          justify-content: center;
+          height: 80px;
+          >* {
+            vertical-align: middle;
+          }
+        }
+      }
+      &:after {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background: #fff;
+        content: '';
+        z-index: 5;
+        transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        px2px(bottom, -10px);
+        px2px(left, 50px);
+      }
+    }
+
+.modal-dialog
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 500px;
+  background: rgba(0,0,0,50);
+  z-index: 10;
+  px2px(font-size, 50px);
+  px2px(top, -420px);
+  px2px(bottom, 0px);
+
+  input[type="file"], .upload
+    px2px(font-size, 32px);
+
+  .progress
+    display: inline-block;
+    width: 300px;
+    height: 10px;
+    background: #fff;
+    vertical-align: middle;
+    font-size: 0px;
+
+    em
+     display: inline-block;
+     height: 100%;
+     background: greenyellow;
+
+.is-pc .l-chatbox {
+  position: absolute;
+  top: 631px;
+  bottom: initial;
+  padding: 10px;
+  width: 572px;
+  height: 30px;
+  box-shadow: none;
+  background: #fff;
+
+  &.student {
+    width: 275px;
+    left: 612px;
+  }
+
+  .box {
+    margin: 0 auto;
+    max-width: 1600px;
+
+    > * {
+      height: 30px;
+      &.box-more {
+        margin-left: 0;
+        width: 60px;
+        text-align: left;
+        button {
+          width: 60px;
+          border-radius: 6px;
+          -webkit-border-radius: 6px;
+        }
+        &.isWX {
+          margin-right: 20px;
+        }
+      }
+      &.box-msg {
+        .comment {
+          border-radius: 0;
+        }
+        textarea, input {
+          padding: 8px 0 0 10px;
+          height: 18px;
+          line-height: 1;
+          outline:none;
+        }
+        &.s-msg {
+          textarea, input {
+            padding: 0 0 0 10px;
+            height: 30px;
+          }
+        }
+        .reorder {
+          top: 1px;
+        }
+      }
+      &.more-choice {
+        left: 20px;
+        padding: 5px;
+        width: 100px;
+        height: 100px;
+
+        &.is-free {
+          height: 50px;
+        }
+        button {
+          border-top: 1px solid #fff;
+          height: 49px;
+          .sItem {
+            height: 48px;
+          }
+        }
+        .close {
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 20px;
+          color: #03a9f4;
+          text-decoration: none;
+
+          &:hover {
+            color: greenyellow;
+          }
+        }
+      }
+    }
+  }
+
+  &.student {
+    .box {
+      .more-choice {
+        padding: 0;
+        height: auto;
+
+        &:after {
+          bottom: -9px;
+          z-index: -1;
+          border: 1px solid #d0f1fd;
+        }
+        &.has-refund {
+          height: 148px;
+        }
+      }
+    }
+  }
+
+  .modal-dialog {
+    left: 140px;
+    top: -430px;
+    padding: 20px;
+    width: 420px;
+    height: 420px;
+    color: #fff;
+    background: #12b7f5;
+
+    .modal-header {
+      padding-bottom: 16px;
+      font-size: 16px;
+      text-align: center;
+    }
+    .modal-body {
+      font-size: 14px;
+      .modal-img {
+        height: 100px;
+      }
+      input {
+        border: 0 none;
+        font-size: 14px;
+      }
+      button {
+        border: 0 none;
+        background: #fff;
+      }
+      img {
+        max-height: 225px;
+      }
+    }
+  }
+
+  &.owner {
+    top: 555px;
+    padding: 10px 14px;
+    width: 548px;
+    height: 110px;
+
+    .box {
+      position: relative;
+      display: block;
+      .box-msg {
+        height: 70px;
+        overflow: hidden;
+
+        textarea {
+          height: 62px;
+        }
+      }
+      .more-choice {
+        left: 10px;
+        bottom: 20px;
+        &:after {
+          display: none;
+        }
+      }
+      .box-more, .box-send {
+        position: absolute;
+        top: 85px;
+
+        &.box-send{
+          top: 81px;
+          right: 0;
+          padding: 4px 10px;
+          height: auto;
+          font-size: 14px;
+          border-radius: 14px;
+          -webkit-border-radius: 14px;
+          cursor: pointer;
+        }
+      }
+      .box-more {
+        top: 82px;
+        &.video {
+          left: 64px;
+        }
+        &.recorder {
+          left: 32px;
+        }
+        .iconfont {
+          display: inline-block;
+          font-size: 24px;
+          cursor: pointer;
+          overflow: hidden;
+          input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            opacity: 0;
+            font-size:0;
+            cursor: pointer;
+            overflow: hidden;
+          }
+          &:hover {
+            color: #12b7f5;
+          }
+        }
+      }
+    }
+    .modal-dialog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      -webkit-display: flex;
+      align-items:center;
+      justify-content: center;
+      background-color: rgba(0,0,0,.3);
+      .modal-body {
+        position: relative;
+        width: 310px;
+        height: auto;
+        button {
+          cursor: pointer;
+          &.cancle {
+            position: absolute;
+            top: -7px;
+            right: -7px;
+            padding: 6px;
+            line-height: 1;
+            color: #fff;
+            background: #000;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            z-index: 4;
+            .icon-guanbi {
+              font-size: 14px;
+            }
+          }
+        }
+        .modal-preview {
+          position: relative;
+          margin: 0;
+          width: 100%;
+          height: 160px;
+          background: #e6e6e6;
+          text-align: center;
+          border-radius: 4px 4px 0 0;
+          -webkit-border-radius: 4px 4px 0 0;
+          .icon-icons01 {
+            display: inline-block;
+            margin-top: 60px;
+            font-size: 30px;
+          }
+          input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            -moz-opacity: 0;
+            -khtml-opacity: 0;
+            -webkit-opacity: 0;
+            opacity: 0;
+          }
+        }
+        .modal-img {
+          height: auto;
+          .preview {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            img {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              max-width: 100%;
+              min-height: auto;
+              max-height: 100%;
+              transform: translate(-50%,-50%);
+              -ms-transform: translate(-50%,-50%); 	/* IE 9 */
+              -moz-transform: translate(-50%,-50%); 	/* Firefox */
+              -webkit-transform: translate(-50%,-50%); /* Safari 和 Chrome */
+              -o-transform: translate(-50%,-50%); 	/* Opera */
+            }
+          }
+        }
+        .upload {
+          display: block;
+          padding: 14px 0;
+          width: 100%;
+          line-height: 1;
+          color: #12b7f5;
+          text-align: center;
+          //border-radius: 0 0 4px 4px;
+          //-webkit-border-radius: 0 0 4px 4px;
+        }
+        .progress {
+          position: relative;
+          width: 310px;
+          height: 2px;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+  &.is-finish {
+    top: 630px;
+    height: 30px;
+  }
+  .cursor {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .l-chatbox {
+    padding-bottom: 60px;
+    .box {
+      .more-choice {
+        px2px(bottom, 183px);
+      }
+    }
+  }
+}

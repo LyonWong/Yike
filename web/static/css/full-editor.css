@@ -1,0 +1,28 @@
+
+@media screen and (min-aspect-ratio: 4/3) {
+  html {
+    background: #f0eff5;
+  }
+  body {
+    max-width: none !important;
+    margin-left: 7.51rem;
+  }
+  .head {
+    display: flex !important;
+  }
+  #frm-editor > .gap {
+    display: none;
+  }
+  .c-create-editor {
+    left: 0;
+    height: 100%;
+  }
+  .editor {
+    height: 100% !important;
+    transition: none !important;
+  }
+  .editor .foot {
+    background-color: transparent;
+    border-top: 1px solid #ddd;
+  }
+}

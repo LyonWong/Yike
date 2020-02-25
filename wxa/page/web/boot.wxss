@@ -1,0 +1,12 @@
+/* page/web/boot.wxss */
+.container {
+  background-color: #10b7f6;
+  padding: 60rpx 0;
+}
+#info {
+  color: #fff;
+  font-size: 60rpx;
+}
+#desc {
+  color: #fff;
+}

@@ -1,0 +1,4 @@
+export const START_LOADING = 'START_LOADING';
+export const FINISH_LOADING = 'FINISH_LOADING';
+export const FETCH_USER_INFO = 'FETCH_USER_INFO';
+export const UPDATE_FOOTER = 'UPDATE_FOOTER';

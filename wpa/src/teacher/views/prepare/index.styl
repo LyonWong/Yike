@@ -1,0 +1,432 @@
+.prepare
+  .insert-point
+    right: 100px;
+    padding: 2px;
+    color: #12b7f5;
+    input
+      text-align: center;
+      border: 1px solid #12b7f5;
+  ul
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  padding: 0 235px 0 0;
+  background: #efeff4;
+  .prepare-box
+    background: #fff;
+  a
+    text-decoration: none;
+  .prepare-title
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #EFEFF4;
+    a
+      color: #3c4a55;
+      &:focus, &:visited
+        color: #3c4a55;
+    a.back
+        color:#12b7f5;
+    a.preview
+        color: #12b7f5;
+        border: 1px solid #12b7f5;
+        border:1px solid;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin: 0 10px;
+    a.release
+        color: #fff;
+        background: #12b7f5;
+        border:1px solid;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin: 0 5px;
+  .prepare-body
+    margin-bottom: 15px;
+    padding: 0 20px;
+    height: 580px;
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .prepare-content
+      padding: 0 0 20px;
+      ul
+        padding: 0 30px;
+        li
+          position: relative;
+          display: -webkit-box;
+          display: box;
+          padding: 15px 0;
+          border-bottom: 1px solid #EFEFF4;
+          > *
+            display: -webkit-box;
+            display: box;
+          > :first-child
+            width: 65px;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+          > :nth-child(2)
+            width: 430px;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+          .handle
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            > span
+              display: inline-block;
+              margin-left: 5px;
+              padding: 6px 7px;
+              color: #757F98;
+              background: #EFEFF4;
+              border-radius: 15px;
+              -webkit-border-radius: 15px;
+              &.disabled
+                color: #bfbfbf;
+          .note
+            margin: 0;
+            margin-left: 10px;
+            width: 130px;
+            height: 20px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            cursor: pointer;
+            color: #999;
+            font-size: 14px;
+          .text
+            word-break: break-all;
+      .cursor-pointer
+        cursor: pointer;
+      .image
+        img
+          max-width: 200px;
+          max-height: 200px;
+      .video
+        video
+          max-width: 300px;
+          max-height: 300px;
+  .prepare-textarea
+    padding: 0 20px;
+    .textarea-box
+      padding: 5px 10px;
+      border: 1px solid #e6eaf2;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+    .textarea-more
+      position: relative;
+      height: 60px;
+      > *
+        position: absolute;
+        top: 13px;
+      > button
+        right: 0;
+        padding: 4px 10px;
+        font-size: 14px;
+        border: 0 none;
+        border-radius: 14px;
+        -webkit-border-radius: 14px;
+        color: #fff;
+        background: #12b7f5;
+        cursor: pointer;
+    textarea
+      padding: 0;
+      width: 100%;
+      height: 60px;
+      font-size: 14px;
+      outline: none;
+      border: 0 none;
+      resize : none
+  .box-more
+    display: inline-block;
+    padding-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    .iconfont {
+      position: relative;
+      display: inline-block;
+      font-size: 24px;
+      overflow: hidden;
+      color: #12B7F5;
+      input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #fff;
+        width: 24px;
+        height: 24px;
+        opacity: 0;
+        font-size: 0;
+        overflow: hidden;
+        cursor: pointer;
+      }
+    }
+    .icon-shangchuanshipin {
+      padding-left: 3px;
+      font-size: 22px;
+    }
+    .l-recorder {
+      cursor: pointer;
+    }
+  .modal-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .3);
+    .modal-body {
+      position: relative;
+      width: 310px;
+      height: auto;
+      button {
+        cursor: pointer;
+        border: 0 none;
+        &.cancle {
+          position: absolute;
+          top: -7px;
+          right: -7px;
+          padding: 6px;
+          line-height: 1;
+          color: #fff;
+          background: #000;
+          border-radius: 15px;
+          -webkit-border-radius: 15px;
+          z-index: 4;
+          .icon-guanbi {
+            font-size: 14px;
+          }
+        }
+      }
+      .modal-preview {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 160px;
+        background: #e6e6e6;
+        text-align: center;
+        border-radius: 4px 4px 0 0;
+        -webkit-border-radius: 4px 4px 0 0;
+        .icon-icons01 {
+          display: inline-block;
+          margin-top: 60px;
+          font-size: 30px;
+          color: #fff;
+        }
+        input[type="file"] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 3;
+          -moz-opacity: 0;
+          -khtml-opacity: 0;
+          -webkit-opacity: 0;
+          opacity: 0;
+        }
+      }
+      .modal-img {
+        height: auto;
+        .preview {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            max-width: 100%;
+            min-height: auto;
+            max-height: 100%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%); /* IE 9 */
+            -moz-transform: translate(-50%, -50%); /* Firefox */
+            -webkit-transform: translate(-50%, -50%); /* Safari 和 Chrome */
+            -o-transform: translate(-50%, -50%); /* Opera */
+          }
+        }
+      }
+      .modal-video {
+        .modal-preview {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1.5;
+          input {
+            position: relative;
+            width: auto;
+            height: auto;
+            -moz-opacity: 1;
+            -khtml-opacity: 1;
+            -webkit-opacity: 1;
+            opacity: 1;
+          }
+          .tip {
+            color: #aaa;
+          }
+        }
+        .modal-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          button {
+            border-radius: 0 0 0 4px;
+            -webkit-border-radius: 0 0 0 4px;
+          }
+          button + button {
+            border-left: 1px solid #12b7f5;
+            border-radius: 0 0 4px 0;
+            -webkit-border-radius: 0 0 4px 0;
+          }
+          :only-child {
+            cursor: default;
+            border-radius: 0 0 4px 4px;
+            -webkit-border-radius: 0 0 4px 4px;
+          }
+        }
+      }
+      .upload {
+        display: block;
+        padding: 15px 0;
+        width: 100%;
+        line-height: 1;
+        color: #12b7f5;
+        font-size: 16px;
+        text-align: center;
+        background: #fff;
+        border-radius: 0 0 4px 4px;
+        -webkit-border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+
+  .box-more .icon-bookmark
+    padding-bottom: 2px;
+
+  .icon-bookmark:before
+    cursor: pointer;
+    font-size: 21px;
+    border: 1px solid;
+
+  .modal-body-mark
+    width: 30%;
+    padding: 40px 40px;
+    background: #fff;
+    .textarea-frm
+      text-align: right
+    button
+      margin-top 10px
+      padding: 4px 10px;
+      font-size: 14px;
+      border: 0 none;
+      border-radius: 14px;
+      -webkit-border-radius: 14px;
+      color: #fff;
+      background: #12b7f5;
+      cursor: pointer;
+    .textarea
+      width: auto
+      background: #fff;
+      padding: 5px 10px;
+      border: 1px solid #e6eaf2;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      resize : none;
+    textarea
+      padding: 0;
+      width: 100%;
+      height: 60px;
+      font-size: 14px;
+      outline: none;
+      border: 0 none;
+      resize : none;
+
+  .text {
+    border: 0;
+    width: 430px;
+    heigh: 100%;
+    padding: 0;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 20px;
+    -webkit-box-align: center;
+  }
+
+  .textarea {
+    border: 0;
+    width: 414px;
+    font-size: 16px;
+    text-align: justify;
+    padding: 0;
+    word-break break-all;
+    line-height: 20px;
+    -webkit-box-align: center;
+  }
+
+  .active-text {
+    width: 420px;
+    border: 1px solid lightskyblue;
+    border-radius: 5px;
+    text-align: justify;
+    word-break break-all;
+    resize:none
+  }
+  #tag + .active-text {
+    border: 1px solid lightskyblue;
+    border-radius: 5px;
+    text-align: justify;
+    width: 414px;
+    margin-top: 7px;
+  }
+  #tag {
+    width auto;
+    color: #12b7f5;
+    padding: 2px 2px 0 0;
+  }
+  span#tag:before {
+    display: block;
+    font-size: 14px;
+    cursor: default;
+  }
+  #hide {
+    display: none;
+  }
+
+  .prepare-content textarea {
+    overflow-y: scroll;
+    margin-top: 5px;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 20px;
+    resize:none
+  }
+  .prepare-body ul li>div,.prepare-body ul li span{
+    height: 100%;
+  }
+  #prepare-content > ul > li,#prepare-content > ul > li > .handle{
+    display :flex;
+    flex-direction row
+    justify-content center;
+    align-items :center
+  }
+  .prepare-body .prepare-content ul li > .markdown
+    display: block;
+    flex-direction: column;
+    ul
+     list-style-type: disc;
+     li
+       border-bottom: 0 !important;
+       padding: 0 !important;
+  .hide
+    display: none !important;
+  .markdown li:before
+    content: "·";
+  .textarea-hint
+    padding: 0 1em 1em 1em;

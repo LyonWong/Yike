@@ -1,0 +1,8 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+
+space=$1
+path=$2
+
+
+$PHPUNIT --bootstrap="$PATH_CORE/command/test.php"  ${*:3} "$PATH_ROOT/$space/test/$path" ~~space=$space

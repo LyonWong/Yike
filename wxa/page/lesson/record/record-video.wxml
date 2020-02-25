@@ -1,0 +1,5 @@
+<template name="record-video">
+<view class="record-video">
+  <video src="av-{{content.data}}" data-avpos="{{content.avpos}}"></video>
+</view>
+</template>

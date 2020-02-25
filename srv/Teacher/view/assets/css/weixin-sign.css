@@ -1,0 +1,7 @@
+.impowerBox .qrcode {width:260px;height:260px;margin-top:0;border:0}
+.impowerBox .title {display: none;}
+.impowerBox .info {display:none}
+.status_icon {display:none}
+.impowerBox .status {display: none}
+body{margin:0;width:260px;height:260px; }
+iframe{margin:0;width:260px;height:260px; }

@@ -1,0 +1,47 @@
+<!--page/pay/index.wxml-->
+<view class="frm-flex flex-col">
+  <view class="panel info">
+    <view class="panel-head flex-row">
+      <text>订单金额</text>
+      <text>
+        <text class="prime-price">￥{{order_total/100}}</text>
+        <text class="current-price">￥{{order_amount/100}}</text>
+      </text>
+    </view>
+    <view class="panel-body">
+      <view class="panel-list">
+        <view class="panel-list-item" wx:if="{{deduct}}">
+          <text>优惠抵扣</text>
+          <text>{{deduct/100}}</text>
+        </view>
+        <view class="panel-list-item" wx:if="{{charge}}">
+          <text>余额支付</text>
+          <text>￥{{charge/100}}</text>
+        </view>
+        <view class="panel-list-item">
+          <text>微信支付</text>
+          <text class="color-primary">￥{{surplus/100}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="panel list">
+    <view class="panel-head">
+      订单信息
+    </view>
+    <view class="panel-body">
+      <view class="panel-list">
+        <view class="panel-list-item" wx:for="{{list}}" wx:key="*this">
+          <text>{{item.title}}</text>
+          <text>￥{{item.price/100}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="frm-bottom">
+  <view class="frm-button">
+    <button type="primary" bindtap="purchase">购买课程</button>
+  </view>
+</view>

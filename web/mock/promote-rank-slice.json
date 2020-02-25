@@ -1,0 +1,22 @@
+{
+  "error": "0",
+  "message": "success",
+  "data": [
+    {
+      "avatar": "https://storage.yike.fm/user/U59688f9f8ed7c/avatar!avatar?1dcru9n",
+      "cursor": 1,
+      "name": "Caoz",
+      "rank": 2,
+      "score": 43,
+      "sn": "U59688f9f8ed7c"
+    },
+    {
+      "avatar": "https://storage.yike.fm/user/U59688f9f8ed7c/avatar!avatar?1dcru9n",
+      "cursor": 2,
+      "name": "明白",
+      "rank": 2,
+      "score": 43,
+      "sn": "U59688f9f8ed7c"
+    }
+  ]
+}

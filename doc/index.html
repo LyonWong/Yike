@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <link href="_/css/github-markdown.css" rel="stylesheet" type="text/css"/>
+    <link href="_/css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="_/css/skin.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="_/js/jquery.min.js"></script>
+    <script type="text/javascript" src="_/js/markdown-it.js"></script>
+    <script type="text/javascript" src="_/js/markdown-it-plugins.js"></script>
+</head>
+
+<body>
+<div id="topbar" class="box">
+    <h1>YikeDoc</h1>
+</div>
+<div id="content" class="box">
+    <div id="toc">
+    </div>
+    <div id="doc" class="markdown-body" data-init="README">
+    </div>
+</div>
+<script type="text/javascript" src="_/js/render.js"></script>
+<script type="text/javascript">
+    window.ts = Date.now();
+    $(function () {
+        $.get('TOC.conf?'+window.ts, function (toc) {
+            renderTOC(
+                JSON.parse(toc)
+            )
+        });
+        renderDoc(location.hash.slice(1) || $('#doc').data('init'));
+    });
+    $('#topbar').click(function(){
+        location.href='./';
+    });
+    $('#toc').on('click', '.link', function () {
+        var path = $(this).data('path');
+        if (path) {
+            $('.link').removeClass('active');
+            $(this).addClass('active');
+            location.hash = path;
+            renderDoc(path)
+        }
+    });
+</script>
+</body>
+
+</html>

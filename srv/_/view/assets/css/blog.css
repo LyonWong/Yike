@@ -1,0 +1,99 @@
+.blog-head {
+  background: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  padding: .3rem;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #ccc;
+}
+.blog-list {
+  background: #fff;
+  min-height: 100%;
+}
+.blog-view {
+  background: #fff;
+  min-height: 100%;
+}
+.blog-item {
+  padding: .3rem;
+  cursor: pointer;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  height: 1.28rem;
+}
+a.blog-item {
+  color: #666;
+}
+
+.c-profile-cell:last-child {
+  border-bottom: 0;
+}
+
+.blog-item .cover > img {
+  width: 2.4rem;
+  height: 1.28rem;
+  padding-top: .05rem;
+}
+.blog-item .datum {
+  justify-content: space-between;
+  width: 4.2rem;
+  height: 113%;
+}
+.blog-item .datum>div {
+  width: 100%;
+}
+.blog-item .datum-head {
+  font-size: .3rem;
+  color: #0D0D0D;
+}
+.blog-item .datum-body {
+  justify-content: space-between;
+  font-size: .24rem;
+  color: #666;
+}
+.blog-item .datum-foot {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.blog-turn {
+  background: #fff;
+  height: .7rem;
+  font-size: .3rem;
+  justify-content: space-around;
+}
+.blog-turn a {
+  color: #666;
+}
+.blog-view .cover img {
+  width: 100%;
+}
+.blog-view .title {
+  padding: .1rem .3rem;
+}
+.blog-view .content {
+  padding: .1rem .3rem;
+  line-height: 2em;
+}
+.markdown img, .markdown video {
+  max-width: 100%;
+}
+.markdown pre{
+  margin: 1em;
+  padding: .5em 1em;
+  white-space: pre-wrap;
+  border-left: .02rem solid #2F57DA;
+  background: #d6ddf2;
+}
+.markdown code {
+  background: #d6ddf2;
+  padding: 2px 4px;
+  margin: 0 2px;
+  font-size: 90%;
+  border-radius: 3px;
+  color: #2F57DA;
+}
+.markdown pre code {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}

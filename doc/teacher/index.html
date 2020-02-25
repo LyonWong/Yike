@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <link href="_/css/github-markdown.css" rel="stylesheet" type="text/css"/>
+    <link href="_/css/layout.css?v=1" rel="stylesheet" type="text/css"/>
+    <link href="_/css/skin.css?v=1" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="_/js/jquery.min.js"></script>
+    <script type="text/javascript" src="_/js/markdown-it.js"></script>
+    <script type="text/javascript" src="_/js/markdown-it-plugins.js"></script>
+</head>
+
+<body>
+<div id="topbar" class="box">
+    <div class="logo">
+        <img src="./_/img/logo-o.png"/>
+    </div>
+    <div class="info">
+        <h1>易灵微课讲师指南</h1>
+    </div>
+</div>
+<div id="content" class="box">
+    <div id="toc">
+    </div>
+    <div id="doc" class="markdown-body" data-init="README">
+    </div>
+</div>
+<script type="text/javascript" src="_/js/render.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $.get('TOC.conf?'+Date.now(), function (toc) {            
+            renderTOC(
+                JSON.parse(toc)
+            )
+        });
+        renderDoc(location.hash.slice(1) || $('#doc').data('init'));
+    });
+    $('#topbar').click(function(){
+        location.href='./';
+    });
+    $('#toc').on('click', '.link', function () {
+        var path = $(this).data('path');
+        if (path) {
+            $('.link').removeClass('active');
+            $(this).addClass('active');
+            location.hash = path;
+            renderDoc(path)
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+.markdown {
+  color: #0d0d0d;
+  letter-spacing: .007rem;
+  line-height: 1.5;
+}
+
+.markdown hr {
+  margin: .2rem;
+  color: #2F57DA;
+  border-image: linear-gradient(to right, transparent, #2F57DA, transparent) 1 1;
+}
+
+.markdown h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: .1em;
+  background-image: linear-gradient(115deg, transparent 47%, #C3EFFF 47%, #C3EFFF 54%, #fff 54%);
+  font-size: .42rem;
+  color: #2F57DA;
+}
+
+.markdown h1:before, .markdown h1:after {
+  padding: 0 .2rem;
+  content: "•";
+  color: #2F57DA;
+  font-size: .8em;
+}
+
+.markdown h2 {
+  display: inline-block;
+  margin: .3rem 0 0 0;
+  padding: 0 .1rem;
+  font-size: .33rem;
+  line-height: .3rem;
+  color: #333;
+  background-image: linear-gradient(to bottom, transparent .14rem, #C3EFFF .14rem, #C3EFFF);
+}
+
+.markdown h3 {
+  margin: .42rem 0 0 0;
+  padding: .1em .5em;
+  font-size: .3rem;
+  color: #333;
+}
+
+.markdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.markdown ul > li {
+  padding: .5em 0 .5em 1em;
+  color: #333333;
+}
+
+.markdown ul > li:before {
+  padding: 0 .5em;
+  margin-left: -1.4em;
+  content: "•";
+  color: #2F57DA;
+}
+
+.markdown ol {
+  padding-left: 30px;
+}
+.markdown ol > li {
+  padding: .5em 0;
+  color: #333333;
+}
+
+.markdown img {
+  max-width: 100%;
+}
+
+.markdown blockquote {
+  margin: 1em;
+  border-left: .02rem solid #2F57DA;
+  background: #C3EFFF44;
+}
+.markdown blockquote p {
+  padding: .05rem 1em;
+}
+.markdown pre {
+  padding: 1em;
+  white-space: pre-wrap;
+  background: #C3EFFF44;
+}
+.markdown code {
+  background: #C3EFFF44;
+}

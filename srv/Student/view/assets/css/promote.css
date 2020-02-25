@@ -1,0 +1,249 @@
+html {
+    height: 100%;
+    font-size: calc(100vw/75); /*width:750px, font:10px*/
+    display: flex;
+}
+
+body {
+    text-align: center;
+    background: url('../img/coupon/background.jpg') no-repeat center fixed;
+    background-size: cover;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: transparent;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+.flex-row {
+    justify-content: center;
+}
+.flex-col {
+    flex-direction: column;
+}
+.hide {
+    display: none;
+}
+.btn-group {
+    padding: 4rem;
+}
+.btn-group > button {
+    margin: 2rem;
+}
+button.btn-main {
+    font-size: 3.6rem;
+    color: #fff;
+    background: #c09f6f;
+    padding: 3rem 0;
+    width: 100%;
+    border: 0;
+}
+.btn-main a {
+    color: #fff;
+}
+.btn-disabled {
+    background: #aaa !important;
+}
+
+.layout {
+    padding: 5rem 4rem;
+    min-height: 90%;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.upper {
+    padding-top: 5rem !important;
+}
+.lower {
+    flex-grow: 1;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.ticket {
+    background: rgba(255,255,255,0.9);
+    padding: 2rem 4.5rem;
+}
+
+.blank-bar-10 {
+    height: 1rem;
+}
+.blank-bar-20 {
+    height: 2rem;
+}
+.blank-bar-50 {
+    height: 5rem;
+}
+.user-refer {
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+    color: #333;
+}
+.user-refer > img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: .5rem;
+    border-radius: 2rem;
+}
+.highlight {
+    color: #fb6666;
+}
+
+
+.title-main {
+    font-size: 4.4rem;
+    color: #c09f6f;
+}
+.title-vice {
+    font-size: 2.8rem;
+    color: #333;
+}
+.info {
+    padding-bottom: 3rem;
+    border-width: 0 .1rem .1rem .1rem;
+    border-style: solid;
+    border-color: #c09f6f;
+    position: relative;
+}
+.info-title {
+    font-size: 3rem;
+    color: #999;
+    border-top: .1rem solid;
+    border-image: linear-gradient(to right, #c09f6f ,transparent 20%, transparent 80%, #c09f6f) 1 1;
+    position: relative;
+}
+.info-title > div {
+    position: relative;
+    top: -3rem;
+}
+.info-lesson {
+    font-size: 4.2rem;
+    color: #333;
+    padding-bottom: 2rem;
+}
+.info-teacher {
+    font-size: 3rem;
+    color: #c09f6f;
+}
+.info-button {
+    padding: 4rem;
+}
+.info-button > button {
+    font-size: 3.6rem;
+    color: #fff;
+    background: #c09f6f;
+    padding: 3rem 0;
+    width: 100%;
+    border: 0;
+}
+.info-link a{
+    font-size: 2.8rem;
+    color: #666;
+    padding: 0 .7rem;
+    border-bottom: .1rem solid #666;
+}
+
+.sever-rod {
+    flex-grow: 1;
+}
+.sever-bar {
+    background: rgba(255, 255, 255, 0.9);
+    height: 1.6rem;
+}
+.sever-hole {
+    height: 1.6rem;
+    background-image: radial-gradient(transparent, transparent 50%, rgba(255,255,255,0.9) 50%);
+    background-size: 1.6rem 1.6rem;
+    background-repeat: repeat-x;
+}
+.sever-addon {
+    width: 2.4rem;
+    height: 4.8rem;
+    background-image: radial-gradient(transparent, transparent 50%, rgba(255,255,255,0.9) 50%);
+    background-size: 4.8rem 4.8rem;
+    background-position-x: -2.4rem;
+}
+.sever-pre-addon {
+    background-position-x: -2.4rem;
+}
+.sever-suf-addon {
+    background-position-x: 4.8rem;
+}
+
+.desc {
+    font-size:2.8rem;
+    color: #666;
+}
+.helper {
+    justify-content: space-between;
+    font-size: 2.8rem;
+    color: #333;
+    padding: 1rem 5rem;
+}
+.help-result {
+    width: 20rem;
+    text-align: left;
+}
+
+.rule {
+    color: #666;
+    font-size: 2.8rem;
+    padding-top: 3rem;
+}
+.rule-line {
+    flex-grow: 1;
+    height: .1rem;
+}
+.rule-pre-line {
+    background-image: linear-gradient(to right, transparent, #666);
+}
+.rule-suf-line {
+    background-image: linear-gradient(to left, transparent, #666);
+}
+.rule-list {
+    text-align: left;
+}
+
+.mask {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: center;
+}
+
+.pop {
+    width: 80%;
+    font-size: 3.6rem;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 7rem 2rem;
+    justify-content: space-between;
+}
+.pop-body {
+    font-size: 2.8rem;
+    color: #666;
+    padding: 1rem;
+}
+.pop-foot {
+    width: 80%;
+}
+button.btn-pop-close {
+    color: #fff;
+    font-size: 3.6rem;
+    background: #c09f6f;
+    padding: 3rem 0;
+    width: 100%;
+    border: 0;
+}
+.pop-img {
+    padding: 3rem;
+}
+

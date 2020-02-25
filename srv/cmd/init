@@ -1,0 +1,31 @@
+#!/bin/bash
+source `cd $(dirname $0);pwd`/base.sh
+
+function init_module(){
+	if [ ! $1 ];then
+		echo "Module name is required"
+		exit
+	fi
+	name=$1
+	echo "Init new module: $name"
+
+	cd $PATH_ROOT
+	mkdir -p $name/{basic,config/{basic,local},control,data,file,public,service,test,view/{assets,template,widget}}
+}
+
+function init_test(){
+	echo $1
+	echo $2
+}
+case $1 in
+	module)
+		init_module ${*:2}
+		;;
+	test)
+		init_test ${*:2}
+		;;
+	*)
+		echo "No command for \`$1\`"
+		exit
+		;;
+esac

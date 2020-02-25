@@ -1,0 +1,6 @@
+body {
+    font-family: "Microsoft Yahei", Consolas, serif;
+}
+.hided {display: none}
+.tag {padding: 3px 6px}
+.cursor-pointer {cursor: pointer}

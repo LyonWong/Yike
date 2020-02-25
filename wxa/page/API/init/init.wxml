@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <block>
+        <image style="width: 150px;height: 150px;" src="http://qiniu.yike.fm/card/logo"></image>
+        <text style="padding-top: 15px;">启动中...</text>
+      </block>
+    </view>
+  </view>
+</view>

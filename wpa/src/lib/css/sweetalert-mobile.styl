@@ -1,0 +1,53 @@
+@import '~@lib/css/index.styl';
+
+body.is-mobile {
+  .sweet-alert{
+    margin: 0 !important;
+    margin-left: -310px !important;
+    padding: 40px;
+    width: 540px;
+    transform: translateY(-50%);
+    -webkit-transorm: translateY(-50%);
+
+    /*&.showSweetAlert {
+      -webkit-animation: showSweetAlert 0s;
+      animation: showSweetAlert 0s;
+    }*/
+    h2 {
+      display: none;
+    }
+    >p {
+      text-align: left;
+      px2px(font-size, 30px);
+    }
+    .sa-button-container {
+      border-top: 0 none;
+      .sa-confirm-button-container{
+        button {
+          display: inline-block;
+          margin-top: 40px;
+          text-align: right;
+          tap-highlight-color: transparent;
+          -webkit-tap-highlight-color: transparent;
+          &.confirm {
+            background: transparent !important;
+            color: #09BB07;
+            box-shadow: none !important;
+            px2px(font-size, 30px);
+          }
+        }
+      }
+      button.cancel {
+        display: -webkit-box;
+        display: box;
+        margin: 40px 0 0;
+        width: 280px;
+        background: transparent;
+        color: #797979;
+        text-align: left;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        px2px(font-size, 30px);
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+SH=bash
+PHP=php
+PHP_FPM=php-fpm
+PHPUNIT=phpunit
+RELEASE_DIR=/srv
+RELEASE_VOL=16
+RELEASE_USR=`whoami`
+RELEASE_GRP=`whoami`
+RELEASE_NPM=release
+RUNTIME_DIR=runtime

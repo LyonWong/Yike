@@ -1,0 +1,12 @@
+/* page/boot.wxss */
+#container {
+  height: 100%;
+  background-color: #14b7f7;
+  color: #fff;
+}
+#container > view {
+  padding: 20rpx;
+}
+#title > text{
+  font-size: 20pt;
+}
