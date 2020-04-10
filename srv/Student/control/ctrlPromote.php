@@ -116,7 +116,11 @@ class ctrlPromote extends ctrlSess
             if ($info['lesson_id']) {
                 $target = servLesson::sole($this->platform)->detail($info['lesson_id'], 'id');
 //                $target['href'] = '/?#/course/detail/brief?lesson_sn=' . $target['sn'];
-                $target['href'] = "$scheme://$domain/lesson/detail?sn=$target[sn]";
+                if ($target['form'] == 'article') {
+                    $target['href'] = "$scheme://$domain/study/article?sn=$target[sn]";
+                } else {
+                    $target['href'] = "$scheme://$domain/lesson/detail?sn=$target[sn]";
+                }
             } else {
                 $target = servLessonSeries::sole($this->platform)->detail($info['series_id'], 'id');
                 $target['title'] = $target['name'];
